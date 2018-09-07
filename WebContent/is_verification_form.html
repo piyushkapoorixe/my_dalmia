@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+<title>Dalmia</title>
+<link rel="shortcut icon" href="/git/buildexpert_server1/DalmiaProject/WebContent/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="images/favicon.ico" type="image/ico" />
+<!-- Bootstrap framework -->
+<link type="text/css" href="css/admin-style.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<script type='text/javascript' src="js/jquery.min.js"></script>
+<script type='text/javascript' src="js/jquery.blockUI.js"></script>   
+<script type='text/javascript'>
+
+$(document).ready(function(){
+    $("#parent1").css("display","none");
+        $(".aboveage1").click(function(){
+        if ($('input[name=age1]:checked').val() == "No" ) {
+            $("#parent1").slideDown("fast"); //Slide Down Effect
+        } else {
+            $("#parent1").slideUp("fast");  //Slide Up Effect
+        }
+     });
+});
+
+webshim.setOptions('forms-ext', {
+    replaceUI: 'auto',
+    types: 'date',
+    date: {
+        startView: 2,
+        inlinePicker: true,
+        classes: 'hide-inputbtns'
+    }
+});
+webshim.setOptions('forms', {
+    lazyCustomMessages: true
+});
+//start polyfilling
+webshim.polyfill('forms forms-ext');
+
+//only last example using format display
+$(function () {
+    $('.format-date').each(function () {
+        var $display = $('.date-display', this);
+        $(this).on('change', function (e) {
+            //webshim.format will automatically format date to according to webshim.activeLang or the browsers locale
+            var localizedDate = webshim.format.date($.prop(e.target, 'value'));
+            $display.html(localizedDate);
+        });
+    });
+});
+
+/*$("input[name=contactnumber]").on("blur", function(e){
+     var myval = $(this).val();
+ 
+     if(myval.length < 10) {
+          alert("Value must contain 10 characters.");
+          $(this).focus();
+     }
+     else if(myval.length > 10) {
+          alert("Value must contain 10 characters.");
+          $(this).focus();
+     }
+});*/
+
+
+
+</script>
+<style>
+	.admin_footer {
+	background-color: #e5e5e5;
+    color: #333333;
+    text-align: center;
+    font-size: 12px;
+    line-height: 40px;
+    bottom: 0px;
+    width: 100%;
+    position:fixed;
+	bottom: 0px;
+	margin-left: -15px;
+	}
+
+	.admin_header {
+    background-color: #eeeee7;
+}
+
+.admin_logo {
+    margin: 10px 0 10px 0px;
+    float: left;
+}
+
+.admin_version {
+    margin: 34px 30px 12px 0px;
+    float: right;
+    font-size: 12px;
+    color: #000;
+}
+
+.admin_left {
+    float: left;
+    width: 850px;
+    margin-top: 0px;
+}
+
+.admin_menu {
+    background-color: #283563;
+    padding: 0 0 0 0px;
+    margin-bottom: 20px;
+}
+
+.admin_menu ul {
+    list-style: none;
+}
+
+ul {
+    margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.admin_menu ul li {
+    list-style: none;
+    display: inline;
+    line-height: 40px;
+    font-size: 14px;
+    position: relative;
+    color: #FFF;
+}
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #46b8da;}
+
+.show-inputbtns {
+    display: inline-block;
+}
+.form-group {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+</style>
+</head>
+<body>
+        <div id="maincontainer" class="clearfix">
+				<header>
+				<div class="container">
+					<div class="admin_header">
+						<div class="admin_logo">
+						<img src="images/logo2.png" width="200" height="auto">
+						</div>
+						<div class="admin_version">
+							<div class="admin_left welcome_admin">
+							<div class="col-lg-5"><h1>Welcome to</h1>
+							<span id="lblusername">
+							<img src="images/user.png" width="30" height="auto"> techsupport@netcommlabs.com</span></div>
+							<div class="col-lg-3"><h2>Last Login </h2>
+							<span><img src="images/time.png" width="30" height="auto">2018.07.23.12.38.33</span></div>
+							<div class="col-lg-3"><h2>Role(Admin) </h2> <span>Admin</span></div>
+							<div class="col-lg-1" style="margin-top:10px;">
+			<form action="#" method="post">
+			 <input type="submit" value="Logout" class="btn btn-danger pull-right">
+			 </form>
+							</div>
+								
+							</div>
+						</div>
+					</div></div>
+					<div class="clearfix"></div>
+					<div class="admin_menu">
+					<div class="container">
+                            <div class="row">
+                                    <div class="col-md-4">
+                                            <ul>
+                
+                                                    <li class="dropdown" onclick="gotoHome()"><a href="Home.html">Back to DashBoard</a></li>
+                                                </ul>
+                                    </div>
+                                    <div class="col-md-6"></div>
+                                    <div class="col-md-2">
+                                            <ul>
+                
+                                                    <li class="dropdown" onclick="gotoHome()"><a href="is_verification.html">Back to IS Verification</a></li>
+                                                </ul>
+                                    </div>
+                                
+                                
+                </div>
+		
+					</div></div>
+		
+		
+				</header>
+            </div>
+
+            <div class="container">
+                <h3 style="padding-bottom: 25px;">Add New IS Verification</h3>
+            </div>
+
+            <div class="container">
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-md-5">
+                                <label for="top">
+                                        Type Of Project 
+                                </label>
+                                <select class="form-control">
+                                    <option>Choose the type of project</option>
+                                    <option value="industrial">Industrial</option>
+                                    <option value="group">Group Housing</option>
+                                    <option value="comm">Commercial</option>
+                                    <option value="res">Residential</option>
+                                    <option value="govt">Govt./infra</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                      
+                            </div>
+                            <div class="col-md-5">
+                                <label>
+                                    Assigned To 
+                                </label>
+                                <select class="form-control">
+                                  <option>TSO Dropdown</option>
+                                  <option>Dummy Data</option>
+                                  <option>Dummy Data</option>
+                                  <option>Dummy Data</option>
+                                </select>
+                                          
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                                <div class="col-md-2" style="width: 125px;">
+                                    <label for="cust">
+                                        Customer :
+                                    </label>
+                                </div>
+                                <div class="col-md-2" style="width: 100px;">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="age1" value="No" class="aboveage1"/>Existing
+                                    </label>    
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="age1" value="Yes" class="aboveage1" checked/>New
+                                    </label> 
+                                    
+                                </div>
+                                <!--<div class="col-md-2" style="width: 360px;">
+                                        
+                                        
+                                    </div>
+                                    <div class="col-md-4">
+                                            
+                                        
+                                        </div>-->
+                        </div>
+
+
+                        <div class="form-group row formset" id="parent1">
+                            <div class="col-md-4">
+                                <label for="parcode">
+                                    Party Code 
+                                </label>
+                                <input type="text" class="form-control" id="party">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="concode">
+                                    Consignee Code
+                                </label>
+                                <input type="text" class="form-control" id="consignee">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="consname">
+                                    Consignee Name 
+                                </label>
+                                <input type="text" class="form-control" id="consigname">
+                            </div>
+                        </div>
+
+                        <div class="form-group row formset">
+                                <div class="col-md-4">
+                                        <label for="regfirmname">
+                                                Registered Firm Name 
+                                            </label>
+                                            <input type="text" class="form-control" id="regname"> 
+                                </div>
+                                <div class="col-md-4">
+                                        <label for="inchargename">
+                                                Site In Charge Name 
+                                            </label>
+                                            <input type="text" class="form-control" id="siteinchargename">     
+                                </div>
+                                <div class="col-md-4">
+                                        <label for="contactno">
+                                                Contact No. 
+                                            </label>
+                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter 10 digit no." pattern="[0-9]{10}" style="width:100%;">     
+                                </div>
+                        </div>
+
+                        <div class="form-group row formset">
+                                <div class="col-md-12">
+                                        <label for="siteaddwithland">
+                                                Site Address with landmark 
+                                            </label>
+                                            <input type="text" class="form-control" id="siteadd">
+                                </div>
+                                
+                        </div>
+
+                        <div class="form-group row formset">
+                                <div class="col-md-4">
+                                        <label for="totreq">
+                                                Total Requirement of Project/Sq. feet under development 
+                                            </label>
+                                            <input type="number" class="form-control" id="totalreq">    
+                                </div>
+                                <div class="col-md-4">
+                                        <label for="completion">
+                                                % Project Complete 
+                                            </label>
+                                            <input type="number" class="form-control" id="comp" name="complete" placeholder="Enter the value in % (0 to 100)" min="0" max="100" style="width:100%;">    
+                                </div>
+                                <div class="col-md-4 show-inputbtns ws-validate">
+                                        <label for="date">
+                                            Tentative completion Date 
+                                        </label>
+                                            <input style="width:100%;" class="form-control" type="date" data-date-inline-picker="false" data-date-popover='{
+                                                "inline": true
+                                            }' />
+                                </div>
+                        </div>
+
+                        
+
+                        <div class="form-group row formset">
+                                
+                                <div class="col-md-4">
+                                        <label for="futreq">
+                                                Monthly Future Requirement
+                                            </label>
+                                            <input type="text" class="form-control" id="futurereq">     
+                                </div>
+                                <div class="col-md-4">
+                                        <label for="top">
+                                                Current Brand in Use
+                                        </label>
+                                        <select class="form-control">
+                                            <option>Choose the brand name</option>
+                                            <option value="one">Brand 1</option>
+                                            <option value="two">Brand 2</option>
+                                            <option value="three">Brand 3</option>
+                                            <option value="four">Brand 4</option>
+                                            <option value="five">Brand 5</option>
+                                        </select> 
+                                    </div>
+                                <div class="col-md-4">
+                                        
+                                        <label for="bags">
+                                                No. of Bags present at project site during order placement 
+                                            </label>
+                                            <input type="number" class="form-control" id="bag" name="noofbags" min="0" max="100" style="width:100%;">  
+                                </div>
+                        </div>
+                        
+                        <div class="form-group row formset">
+                                <div class="col-md-4">
+                                        <label for="nameofisofficer">
+                                                Name of IS officer
+                                            </label>
+                                            <input type="text" class="form-control" id="nameisofficer">    
+                                         
+                                </div>
+                                <div class="col-md-4">
+                                        <label for="officerconno">
+                                                IS Officer Contact No.
+                                            </label>
+                                            <input type="text" class="form-control" id="offconno">      
+                                </div>
+                                <div class="col-md-4">
+                                        <label for="isoffemail">
+                                                IS Officer Email Id
+                                            </label>
+                                            <input type="text" class="form-control" id="isofficermail">   
+                                </div>
+                        </div>
+
+                        
+
+                                <div class="form-group row formset">
+                                <div class="col-md-3">
+                                        <label for="nameofhead">
+                                                Name of Regional Head of TS
+                                            </label>
+                                            <input type="text" class="form-control" id="headofts">   
+                                </div>
+                                
+                                <div class="col-md-3">
+                                        <label for="regionheademail">
+                                                Mail ID of Regional Head of TS
+                                            </label>
+                                            <input type="text" class="form-control" id="regionheadmail">        
+                                        
+                                </div>
+                                <div class="col-md-3">
+                                        <label for="regionalheadtradename">
+                                                Name of Regional Head of Trade
+                                            </label>
+                                            <input type="text" class="form-control" id="regionheadname">   
+                                    </div>
+                                    <div class="col-md-3">
+                                            <label for="regionheadtrademail">
+                                                    Mail ID of Regional Head of Trade
+                                                </label>
+                                                <input type="text" class="form-control" id="regionheadtradeemailid">
+                                        </div>
+                            </div>
+
+                                
+
+                                
+
+                                <div class="form-group row formset">
+                                <div class="col-md-3">
+                                        <label for="asmtradename">
+                                                Name of ASM of Trade
+                                            </label>
+                                            <input type="text" class="form-control" id="nameasmtrade"> 
+                                </div>
+                                
+                                <div class="col-md-3">
+                                        <label for="asmtrademail">
+                                                Mail ID of ASM of Trade
+                                            </label>
+                                            <input type="text" class="form-control" id="asmtradeemailid">
+                                
+                                </div>
+                                <div class="col-md-3">
+                                        <label for="regionalheadisname">
+                                                Name of Regional Head of IS
+                                            </label>
+                                            <input type="text" class="form-control" id="nameregionalheadis">
+                                    </div>
+                                    <div class="col-md-3">
+                                            <label for="regionalheadismail">
+                                                    Mail ID of Regional Head of IS
+                                                </label>
+                                                <input type="text" class="form-control" id="mailidregionalheadis"> 
+                                        </div>
+                            </div>
+
+                                
+
+                                <div class="form-group row formset">
+                                <div class="col-md-3">
+                                        <label for="nameregionalmisofis">
+                                                Name of Regional MIS of IS
+                                            </label>
+                                            <input type="text" class="form-control" id="nameofregionalmisofis">  
+                                </div>
+                                
+                                <div class="col-md-3">
+                                        <label for="mailidregionalmisofis">
+                                                Mail ID of Regional MIS of IS
+                                            </label>
+                                            <input type="text" class="form-control" id="regionalmisofismailid">    
+                                
+                                </div>
+                                <div class="col-md-3">
+                                        <label for="zonalmisoftsname">
+                                                Name of Zonal MIS of TS
+                                            </label>
+                                            <input type="text" class="form-control" id="namezonalmisofts">
+                                    </div>
+                                    <div class="col-md-3">
+                                            <label for="mailidofzonalmisofts">
+                                                    Mail ID of Zonal MIS of TS
+                                                </label>
+                                                <input type="text" class="form-control" id="emailzonalmisofts">
+                                        </div>
+                            </div>
+
+                                
+                                <div class="form-group row formset">
+                                <div class="col-md-5">
+                                        <label for="tsoname">
+                                                Name of TSO
+                                            </label>
+                                            <input type="text" class="form-control" id="nameoftso">  
+                                </div>
+                                <div class="col-md-2">
+                                    
+                                </div>
+                                <div class="col-md-5">
+                                        <label for="emailidoftso">
+                                                Mail ID of TSO
+                                            </label>
+                                            <input type="text" class="form-control" id="mailoftso">
+                                
+                                </div></div>
+
+                        <div class="form-group row formset">
+                                <div class="col-md-5">
+                                    
+                                </div>
+                                <div class="col-md-4">
+                                        <button type="submit" style="margin-bottom: 30px;" class="btn btn-default btn-info btn-lg">Submit</button>
+                                </div>
+                                <div class="col-md-3">
+                                    
+                                
+                                </div>
+                        </div>
+                    </form>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="container-fluid">
+                    <div class="admin_footer">Dalmia</div>
+            </div>
+</body>
+</html>

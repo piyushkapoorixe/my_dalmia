@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1">
+    <title>Dalmia</title>
+    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/image/favicon.ico" type="image/ico" />
+    <!-- Bootstrap framework -->
+    <link type="text/css" href="css/admin-style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script type='text/javascript' src="js/jquery.min.js"></script>
+    <script type='text/javascript' src="js/jquery.blockUI.js"></script>
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+    <script type='text/javascript'>
+
+
+    </script>
+    <style>
+        .one {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            margin-top: 25px;
+        }
+
+        div.circle {
+            -moz-border-radius: 50px/50px;
+            -webkit-border-radius: 50px 50px;
+            border-radius: 50%;
+            border: solid 1px #B7B9C1;
+            width: 200px;
+            height: 200px;
+            margin-top: 100px;
+            box-shadow: 0px 1px 4px #e2e2e2 !important;
+        }
+
+        .row_bottom {
+            margin-bottom: 100px !important;
+        }
+
+        .circle:hover {
+            background-color: lightblue;
+        }
+
+
+
+        .image-text {
+            padding-top: 25px;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 16px;
+
+        }
+
+        .image-text-1 {
+            padding-top: 23px;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .admin_footer {
+            background-color: #e5e5e5;
+            color: #333333;
+            text-align: center;
+            font-size: 12px;
+            line-height: 40px;
+            bottom: 0px;
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
+            margin-left: -15px;
+        }
+
+        .admin_header {
+            background-color: #eeeee7;
+        }
+
+        .admin_logo {
+            margin: 10px 0 10px 0px;
+            float: left;
+        }
+
+        .admin_version {
+            margin: 34px 30px 12px 0px;
+            float: right;
+            font-size: 12px;
+            color: #000;
+        }
+
+        .admin_left {
+            float: left;
+            width: 850px;
+            margin-top: 0px;
+        }
+
+        .admin_menu {
+            background-color: #283563;
+            padding: 0 0 0 0px;
+            margin-bottom: 20px;
+        }
+
+        .admin_menu ul {
+            list-style: none;
+        }
+
+        ul {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .admin_menu ul li {
+            list-style: none;
+            display: inline;
+            line-height: 40px;
+            font-size: 14px;
+            position: relative;
+            color: #FFF;
+        }
+
+        /*input.modal_form {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid black;
+    width: 400px;
+}*/
+
+        .form-group {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .onecol {
+            padding-left: 34px;
+            padding-right: 34px;
+        }
+
+        .twocol {
+            padding-left: 34px;
+            padding-right: 34px;
+        }
+
+        .threecol {
+            padding-left: 34px;
+            padding-right: 34px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="maincontainer" class="clearfix">
+        <header>
+            <div class="container">
+                <div class="admin_header">
+                    <div class="admin_logo">
+                        <img src="images/logo2.png" width="200" height="auto">
+                    </div>
+                    <div class="admin_version">
+                        <div class="admin_left welcome_admin">
+                            <div class="col-lg-5">
+                                <h1>Welcome to</h1>
+                                <span id="lblusername">
+                                    <img src="images/user.png" width="30" height="auto"> techsupport@netcommlabs.com</span></div>
+                            <div class="col-lg-3">
+                                <h2>Last Login </h2>
+                                <span><img src="images/time.png" width="30" height="auto">2018.07.23.12.38.33</span></div>
+                            <div class="col-lg-3">
+                                <h2>Role(Admin) </h2> <span>Admin</span></div>
+                            <div class="col-lg-1" style="margin-top:10px;">
+                                <form action="#" method="post">
+                                    <input type="submit" value="Logout" class="btn btn-danger pull-right">
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="admin_menu">
+                <div class="container">
+                    <ul>
+
+                        <li class="dropdown" onclick="gotoHome()"><a href="Home.html">Back to DashBoard</a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+        </header>
+    </div>
+
+
+
+
+
+
+
+    <div class="container">
+        <h2>IS Verification</h2>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Type Of Project
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Customer
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                       Party Code 
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Consignee Code
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Consignee Name
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Registered Firm Name
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row formset onecol">
+
+                                <div class="col-md-12">
+                                    <label for="">
+                                        Site Address With Landmark
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+
+                            </div>
+
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Site Incharge Name
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Contact No.
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Total Requirement of the Project
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Total Balance Requirement of the Project
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row formset threecol">
+
+                                <div class="col-md-4">
+                                    <label for="">
+                                        % Project Complete
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="">
+                                        Tentative Completion Date
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="">
+                                        Monthly Future Requirement
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <!--<div class="col-md-1">
+                                                
+                                                </div>-->
+                            </div>
+
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Current Brand In Use
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                        No. of Bags at project site during order 
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row formset threecol">
+
+                                <div class="col-md-4">
+                                    <label for="">
+                                        Name of IS Officer
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="">
+                                        IS Officer Contact No.
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="">
+                                        IS Officer Email Id
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <!--<div class="col-md-1">
+                                                
+                                                </div>-->
+                            </div>
+                            
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Name of Regional Head of TS
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Mail ID of Regional TS
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Name of Regional Head of Trade
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Mail ID of Regional Head of Trade
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Name of ASM of Trade
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Mail ID of ASM of Trade
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Name of Regional Head of IS
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                       Mail of Regional Head of IS 
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Mail of Regional MIS of IS
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Name of Regional MIS of IS
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Name of Zonal MIS of IS
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Mail ID of Zonal MIS of IS
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row formset twocol">
+
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Name of TSO
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+                                <div class="col-md-1" style="width: 135px;">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="">
+                                        Mail ID of TSO
+                                    </label>
+                                    <input type="text" class="form-control" id="" disabled>
+                                </div>
+
+                            </div>
+
+                            
+
+                        </form>
+
+                        
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container-fluid">
+        <div class="admin_footer">Dalmia</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,790 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+<title>Dalmia</title>
+<link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/image/favicon.ico" type="image/ico" />
+<!-- Bootstrap framework -->
+<link type="text/css" href="css/admin-style.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<script type='text/javascript' src="js/jquery.min.js"></script>
+<script type='text/javascript' src="js/jquery.blockUI.js"></script>
+
+
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+<script type='text/javascript'>
+
+$(document).ready(function(){
+    $("#parent1").css("display","none");
+        $(".aboveage1").click(function(){
+        if ($('input[name=age1]:checked').val() == "No" ) {
+            $("#parent1").slideDown("fast"); //Slide Down Effect
+        } else {
+            $("#parent1").slideUp("fast");  //Slide Up Effect
+        }
+     });
+});
+
+$(document).ready(function(){
+    $("#parent2").css("display","none");
+        $(".aboveage2").click(function(){
+        if ($('input[name=age2]:checked').val() == "No" ) {
+            $("#parent2").slideDown("fast"); //Slide Down Effect
+        } else {
+            $("#parent2").slideUp("fast");  //Slide Up Effect
+        }
+     });
+});
+
+$(document).ready(function(){
+    $("#parent3").css("display","none");
+        $(".aboveage3").click(function(){
+        if ($('input[name=age3]:checked').val() == "No" ) {
+            $("#parent3").slideDown("fast"); //Slide Down Effect
+        } else {
+            $("#parent3").slideUp("fast");  //Slide Up Effect
+        }
+     });
+});
+
+$(document).ready(function(){
+    $("#parent4").css("display","none");
+        $(".aboveage4").click(function(){
+        if ($('input[name=age4]:checked').val() == "No" ) {
+            $("#parent4").slideDown("fast"); //Slide Down Effect
+        } else {
+            $("#parent4").slideUp("fast");  //Slide Up Effect
+        }
+     });
+});
+
+$(document).ready(function(){
+    $("#parent5").css("display","none");
+        $(".aboveage5").click(function(){
+        if ($('input[name=age5]:checked').val() == "No" ) {
+            $("#parent5").slideDown("fast"); //Slide Down Effect
+        } else {
+            $("#parent5").slideUp("fast");  //Slide Up Effect
+        }
+     });
+});
+
+$(document).ready(function(){
+    $("#parent6").css("display","none");
+        $(".aboveage6").click(function(){
+        if ($('input[name=age6]:checked').val() == "No" ) {
+            $("#parent6").slideDown("fast"); //Slide Down Effect
+        } else {
+            $("#parent6").slideUp("fast");  //Slide Up Effect
+        }
+     });
+});
+
+</script>
+<style>
+	.one {
+	width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 25px;
+	}
+	div.circle {
+    -moz-border-radius: 50px/50px;
+    -webkit-border-radius: 50px 50px;
+    border-radius: 50%;
+    border: solid 1px #B7B9C1;
+    width: 200px;
+	height: 200px;
+	margin-top: 100px;
+	box-shadow: 0px 1px 4px #e2e2e2 !important;
+  }
+
+  .row_bottom {
+	  margin-bottom: 100px !important;
+  }
+
+  .circle:hover {
+  background-color: lightblue;
+}
+
+
+	
+	.image-text {
+		padding-top: 25px;
+    font-family: inherit;
+    font-weight: 500;
+	font-size: 16px;
+	
+	}
+	.image-text-1 {
+		padding-top: 23px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 15px;
+	}
+
+	.admin_footer {
+	background-color: #e5e5e5;
+    color: #333333;
+    text-align: center;
+    font-size: 12px;
+    line-height: 40px;
+    bottom: 0px;
+    width: 100%;
+    position:fixed;
+	bottom: 0px;
+	margin-left: -15px;
+	}
+
+	.admin_header {
+    background-color: #eeeee7;
+}
+
+.admin_logo {
+    margin: 10px 0 10px 0px;
+    float: left;
+}
+
+.admin_version {
+    margin: 34px 30px 12px 0px;
+    float: right;
+    font-size: 12px;
+    color: #000;
+}
+
+.admin_left {
+    float: left;
+    width: 850px;
+    margin-top: 0px;
+}
+
+.admin_menu {
+    background-color: #283563;
+    padding: 0 0 0 0px;
+    margin-bottom: 20px;
+}
+
+.admin_menu ul {
+    list-style: none;
+}
+
+ul {
+    margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.admin_menu ul li {
+    list-style: none;
+    display: inline;
+    line-height: 40px;
+    font-size: 14px;
+    position: relative;
+    color: #FFF;
+}
+
+/*input.modal_form {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid black;
+    width: 400px;
+}*/
+
+.form-group {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.onecol {
+ padding-left: 34px;
+ padding-right: 34px;
+}
+.twocol {
+    padding-left: 34px;
+    padding-right: 34px;
+}
+.threecol {
+    padding-left: 34px;
+    padding-right: 34px;
+}
+.fourcol {
+    padding-left: 34px;
+    padding-right: 34px;
+}
+
+
+
+/* Styles the thumbnail */
+a.lightbox img {
+height: 150px;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+margin: 94px 20px 20px 20px;
+}
+
+
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+.lightbox-target {
+position: fixed;
+top: -100%;
+width: 100%;
+background: rgba(0,0,0,.7);
+width: 100%;
+opacity: 0;
+-webkit-transition: opacity .5s ease-in-out;
+-moz-transition: opacity .5s ease-in-out;
+-o-transition: opacity .5s ease-in-out;
+transition: opacity .5s ease-in-out;
+overflow: hidden;
+}
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+
+.lightbox-target img {
+margin: auto;
+position: absolute;
+
+left:0;
+right:0;
+
+max-height: 0%;
+max-width: 0%;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+box-sizing: border-box;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Styles the close link, adds the slide down transition */
+
+a.lightbox-close {
+display: block;
+width:50px;
+height:50px;
+box-sizing: border-box;
+background: white;
+color: black;
+text-decoration: none;
+position: absolute;
+top: -80px;
+right: 0;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:before {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:after {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
+transform:rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
+margin-left: -50px;
+}
+
+.lightbox-target:target img {
+max-height: 100%;
+max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+top: 0px;
+}
+
+
+
+</style>
+</head>
+<body>
+	
+		<div id="maincontainer" class="clearfix">
+				<header>
+				<div class="container">
+					<div class="admin_header">
+						<div class="admin_logo">
+						<img src="images/logo2.png" width="200" height="auto">
+						</div>
+						<div class="admin_version">
+							<div class="admin_left welcome_admin">
+							<div class="col-lg-5"><h1>Welcome to</h1>
+							<span id="lblusername">
+							<img src="images/user.png" width="30" height="auto"> techsupport@netcommlabs.com</span></div>
+							<div class="col-lg-3"><h2>Last Login </h2>
+							<span><img src="images/time.png" width="30" height="auto">2018.07.23.12.38.33</span></div>
+							<div class="col-lg-3"><h2>Role(Admin) </h2> <span>Admin</span></div>
+							<div class="col-lg-1" style="margin-top:10px;">
+			<form action="#" method="post">
+			 <input type="submit" value="Logout" class="btn btn-danger pull-right">
+			 </form>
+							</div>
+								
+							</div>
+						</div>
+					</div></div>
+					<div class="clearfix"></div>
+					<div class="admin_menu">
+					<div class="container">
+						<ul>
+		
+							<li class="dropdown" onclick="gotoHome()"><a href="Home.html">Back to DashBoard</a></li>
+						</ul>
+		
+					</div></div>
+		
+		
+				</header>
+			</div>
+
+    
+            
+
+
+
+
+            <div class="container">
+                    <h2>Tech Expert - Services</h2>
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog modal-lg">
+                      
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                          </div>
+                          <div class="modal-body">
+
+
+                            <form>
+                                    
+            
+                                    
+            
+            
+                                    
+            
+                                    <div class="form-group row formset twocol">
+                                            
+                                            <div class="col-md-5">
+                                                <label for="regfirmname">
+                                                    IHB Name 
+                                                </label>
+                                                <input type="text" class="form-control" id="regname">
+                                            </div>
+                                            
+                                            <div class="col-md-1" style="width: 135px;">
+                                                    
+                                                </div>
+
+                                            <div class="col-md-5">
+                                                    <label for="siteaddwithland">
+                                                       IHB Phone No.  
+                                                    </label>
+                                                    <input type="textarea" class="form-control" id="siteadd">
+                                                </div>
+                                            
+                                    </div>
+
+                                    <div class="form-group row formset threecol">
+                                            <!--<div class="col-md-1">
+                                                
+                                                </div>-->
+                                            <div class="col-md-2">
+                                                    <label for="regfirmname">
+                                                            Visit Type 
+                                                        </label>
+                                                        
+                                                            
+                                            </div>
+                                            <div class="col-md-3">
+                                                    <label class="radio-inline" style="padding-left: 60px;">
+                                                            <input type="radio" name="age2" value="No" class="aboveage2"/>Services
+                                                        </label> 
+                                            </div>
+                                            <div class="col-md-4">
+                                                    <label class="radio-inline" style="padding-left: 40px;">
+                                                            <input type="radio" name="age2" value="Yes" class="aboveage2" />General Visit
+                                                        </label> 
+                                            </div>
+                                            <!--<div class="col-md-1">
+                                                
+                                                </div>-->
+                                    </div> 
+                                    <div class="form-group row formset twocol" id="parent2">
+
+
+
+                                    <div class="form-group row formset fourcol">
+                                            
+                                                <div class="col-md-3">
+                                                        <label for="siteaddwithland">
+                                                                Masking Tape <br><br><input type="checkbox" name="age3" value="No" class="aboveage3" /> 
+                                                             </label>
+                                                    </div>
+                                                    
+                                                    <div class="col-md-3">
+                                                            <label for="siteaddwithland">
+                                                                    Silt Test <br><br><input type="checkbox" name="age4" value="No" class="aboveage4" /> 
+                                                                 </label>
+                                                        </div>
+                                                    <div class="col-md-3">
+                                                            <label for="regfirmname">
+                                                                Sieve Analysis-Fine Aggregate 
+                                                            </label><br>
+                                                            <input type="checkbox" class="" id="regname">
+                                                        </div>
+                                                        
+                                                        <div class="col-md-3">
+                                                            <label for="siteaddwithland">
+                                                                    Sieve Analysis-Coarse Aggregate
+                                                            </label><br>
+                                                            <input type="checkbox" class="" id="siteadd">
+                                                        </div>
+                                        </div>
+
+                                        <div class="form-group row formset fourcol">
+                                            
+                                                <div class="col-md-3" id="parent3">
+                                                        <label for="regfirmname">
+                                                                mm 
+                                                            </label>
+                                                            <input type="text" class="form-control" id="regname">
+                                                    </div>
+                                                    
+                                                    <div class="col-md-3" id="parent4">
+                                                            <label for="regfirmname">
+                                                                    % 
+                                                                </label>
+                                                                <input type="text" class="form-control" id="regname">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                            
+                                                        </div>
+                                                        
+                                                        <div class="col-md-3">
+                                                            
+                                                        </div>
+                                        </div>
+
+                                        
+
+                                        <div class="form-group row formset twocol">
+                                            
+                                                <div class="col-md-5">
+                                                    <label for="regfirmname">
+                                                        Water Test 
+                                                    </label>
+                                                    <input type="text" class="form-control" id="regname">
+                                                </div>
+                                                
+                                                <div class="col-md-4">
+                                                        
+                                                    </div>
+    
+                                                <div class="col-md-3">
+                                                        <label for="siteaddwithland">
+                                                           NDT <br><input type="checkbox" name="age1" value="No" class="aboveage1" /> 
+                                                        </label>
+                                                        
+                                                    </div>
+                                                
+                                        </div>
+
+                                        <div class="form-group row formset twocol" id="parent1">
+                                            
+                                                <div class="col-md-5">
+                                                    <label for="regfirmname">
+                                                        Days 
+                                                    </label>
+                                                    <input type="text" class="form-control" id="regname">
+                                                </div>
+                                                
+                                                <div class="col-md-2">
+                                                        
+                                                    </div>
+    
+                                                <div class="col-md-5">
+                                                        <label for="siteaddwithland">
+                                                           Mpa  
+                                                        </label>
+                                                        <input type="textarea" class="form-control" id="siteadd">
+                                                    </div>
+                                                
+                                        </div>
+
+                                        <div class="form-group row formset threecol">
+                                            
+                                                <div class="col-md-4">
+                                                        <label for="regfirmname">
+                                                                Cube Casted 
+                                                            </label>
+                                                            <input type="text" class="form-control" id="regname"> 
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <label for="regfirmname">
+                                                                Compressive Strength Day 
+                                                            </label>
+                                                            <input type="text" class="form-control" id="regname">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="siteaddwithland">
+                                                        Compressive Strength 
+                                                    </label>
+                                                    <input type="text" class="form-control" id="siteadd">
+                                                </div>
+                                                
+                                        </div>
+
+
+                                        <div class="form-group row formset fourcol">
+                                            
+                                                <div class="col-md-3">
+                                                        <label for="regfirmname">
+                                                                Mix Design 
+                                                            </label><br><br>
+                                                            <input type="checkbox" name="age5" value="No" class="aboveage5" /> 
+                                                </div>
+                                                <div class="col-md-3">
+                                                        <label for="regfirmname">
+                                                                Tips on Good Construction Practices 
+                                                            </label>
+                                                            <input type="checkbox" class="" id="regname">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="siteaddwithland">
+                                                        Cover Block Services 
+                                                    </label><br><br>
+                                                    <input type="checkbox" class="" id="siteadd">
+                                                </div>
+                                                <div class="col-md-3">
+                                                        <label for="siteaddwithland">
+                                                            Concrete Bulk Density Testing 
+                                                        </label>
+                                                        <input type="checkbox" class="" id="siteadd">
+                                                    </div>
+                                                    
+                                                
+                                        </div>
+
+                                        <div class="form-group row formset twocol" id="parent5">
+                                            
+                                                <div class="col-md-5">
+                                                    <label for="regfirmname">
+                                                        Proportion 
+                                                    </label>
+                                                    <input type="text" class="form-control" id="regname">
+                                                </div>
+                                                
+                                                <div class="col-md-2">
+                                                        
+                                                    </div>
+    
+                                                <div class="col-md-5">
+                                                        <label for="siteaddwithland">
+                                                           Grade  
+                                                        </label>
+                                                        <input type="textarea" class="form-control" id="siteadd">
+                                                    </div>
+                                                
+                                        </div>
+
+                                        <div class="form-group row formset threecol">
+                                            
+                                                
+                                                
+                                                    <div class="col-md-3">
+                                                            <label for="siteaddwithland">
+                                                                Flakiness Testing 
+                                                            </label><br>
+                                                            <input type="checkbox" class="" id="siteadd">
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                                <label for="siteaddwithland">
+                                                                    Elongation Test 
+                                                                </label><br>
+                                                                <input type="checkbox" class="" id="siteadd">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                    <label for="siteaddwithland">
+                                                                        Others 
+                                                                    </label><br>
+                                                                    <input type="checkbox" name="age6" value="No" class="aboveage6" />
+                                                                </div>
+                                                
+                                        </div>
+
+                                        <div class="form-group row formset twocol" id="parent6">
+                                            
+                                                <div class="col-md-5">
+                                                    <label for="regfirmname">
+                                                        Result 
+                                                    </label>
+                                                    <input type="text" class="form-control" id="regname">
+                                                </div>
+                                                
+                                                <div class="col-md-2">
+                                                        
+                                                    </div>
+    
+                                                <div class="col-md-5">
+                                                        <label for="siteaddwithland">
+                                                           Test  
+                                                        </label>
+                                                        <input type="textarea" class="form-control" id="siteadd">
+                                                    </div>
+                                                
+                                        </div>
+                                    
+                                       </div> 
+
+                                          
+                           
+                                    
+                                    <div class="form-group row formset onecol">
+                                            
+                                            <div class="col-md-12">
+                                                <label for="regfirmname">
+                                                    Comments 
+                                                </label>
+                                                <input type="text" class="form-control" id="regname">
+                                            </div>
+                                            
+                                            
+                                    </div>
+
+                                    <div class="form-group row formset threecol">
+                                            <!--<div class="col-md-1">
+                                                
+                                                </div>-->
+                                            <div class="col-md-4">
+                                                <label for="regfirmname">
+                                                    Image 
+                                                </label>
+                                                <a class="lightbox" href="#dog">
+                                                        <img src="http://i.huffpost.com/gen/749263/original.jpg"/>
+                                                     </a> 
+                                                     <div class="lightbox-target" id="dog">
+                                                        <img src="http://i.huffpost.com/gen/749263/original.jpg"/>
+                                                        <a class="lightbox-close" href="#"></a>
+                                                     </div>
+                                                
+                                            </div>
+                                            <!--<div class="col-md-4">
+                                                    <label for="regfirmname">
+                                                        Image 
+                                                    </label>
+                                                    <a class="lightbox" href="#dog">
+                                                            <img src="http://i.huffpost.com/gen/749263/original.jpg"/>
+                                                         </a> 
+                                                         <div class="lightbox-target" id="dog">
+                                                            <img src="http://i.huffpost.com/gen/749263/original.jpg"/>
+                                                            <a class="lightbox-close" href="#"></a>
+                                                         </div>
+                                                    
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <label for="regfirmname">
+                                                            Image 
+                                                        </label>
+                                                        <a class="lightbox" href="#dog">
+                                                                <img src="http://i.huffpost.com/gen/749263/original.jpg"/>
+                                                             </a> 
+                                                             <div class="lightbox-target" id="dog">
+                                                                <img src="http://i.huffpost.com/gen/749263/original.jpg"/>
+                                                                <a class="lightbox-close" href="#"></a>
+                                                             </div>
+                                                        
+                                                    </div>
+                                            <div class="col-md-1">
+                                                
+                                                </div>-->
+                                    </div>   
+            
+                                    </form>
+
+                                    <div class="lightbox-target" id="one">
+                                            <img src="http://i.huffpost.com/gen/749263/original.jpg"/>
+                                            <a class="lightbox-close" href="#"></a>
+                                         </div>
+
+
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                  
+
+                  
+
+
+
+
+
+
+
+
+	<div class="container-fluid">
+			<div class="admin_footer">Dalmia</div>
+	</div>
+	
+</body>
+</html>

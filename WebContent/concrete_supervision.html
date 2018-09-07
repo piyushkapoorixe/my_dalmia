@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+<title>Dalmia</title>
+<link rel="shortcut icon" href="/git/buildexpert_server1/DalmiaProject/WebContent/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="images/favicon.ico" type="image/ico" />
+<!-- Bootstrap framework -->
+<link type="text/css" href="css/admin-style.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<script type='text/javascript' src="js/jquery.min.js"></script>
+<script type='text/javascript' src="js/jquery.blockUI.js"></script>
+<script type='text/javascript'>
+
+
+</script>
+<style>
+	.admin_footer {
+	background-color: #e5e5e5;
+    color: #333333;
+    text-align: center;
+    font-size: 12px;
+    line-height: 40px;
+    bottom: 0px;
+    width: 100%;
+    position:fixed;
+	bottom: 0px;
+	margin-left: -15px;
+	}
+
+	.admin_header {
+    background-color: #eeeee7;
+}
+
+.admin_logo {
+    margin: 10px 0 10px 0px;
+    float: left;
+}
+
+.admin_version {
+    margin: 34px 30px 12px 0px;
+    float: right;
+    font-size: 12px;
+    color: #000;
+}
+
+.admin_left {
+    float: left;
+    width: 850px;
+    margin-top: 0px;
+}
+
+.admin_menu {
+    background-color: #283563;
+    padding: 0 0 0 0px;
+    margin-bottom: 20px;
+}
+
+.admin_menu ul {
+    list-style: none;
+}
+
+ul {
+    margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.admin_menu ul li {
+    list-style: none;
+    display: inline;
+    line-height: 40px;
+    font-size: 14px;
+    position: relative;
+    color: #FFF;
+}
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #46b8da;}
+
+.title {
+    width: 320px;
+}
+.top-button {
+    padding-left: 975px;
+}
+
+/*table tbody, table thead
+{
+    display: block;
+}
+
+table tbody 
+{
+   overflow: auto;
+    height: 110px;
+}
+
+table {
+    width: 350px;
+}
+
+th
+{
+    width: 192px;
+}
+
+td
+{
+    width: 192px;
+}*/
+</style>
+</head>
+<body>
+        <div id="maincontainer" class="clearfix">
+				<header>
+				<div class="container">
+					<div class="admin_header">
+						<div class="admin_logo">
+						<img src="images/logo2.png" width="200" height="auto">
+						</div>
+						<div class="admin_version">
+							<div class="admin_left welcome_admin">
+							<div class="col-lg-5"><h1>Welcome to</h1>
+							<span id="lblusername">
+							<img src="images/user.png" width="30" height="auto"> techsupport@netcommlabs.com</span></div>
+							<div class="col-lg-3"><h2>Last Login </h2>
+							<span><img src="images/time.png" width="30" height="auto">2018.07.23.12.38.33</span></div>
+							<div class="col-lg-3"><h2>Role(Admin) </h2> <span>Admin</span></div>
+							<div class="col-lg-1" style="margin-top:10px;">
+			<form action="#" method="post">
+			 <input type="submit" value="Logout" class="btn btn-danger pull-right">
+			 </form>
+							</div>
+								
+							</div>
+						</div>
+					</div></div>
+					<div class="clearfix"></div>
+					<div class="admin_menu">
+					<div class="container">
+						<ul>
+		
+							<li class="dropdown" onclick="gotoHome()"><a href="Home.html">Back to DashBoard</a></li>
+						</ul>
+		
+					</div></div>
+		
+		
+				</header>
+            </div>
+            
+            <div class="container">
+                    <table class="col-lg-12">
+                        <tbody>
+                                <tr style="width: 150%;">
+                                        <td class="top-button">
+                                                <div class="dropdown">
+                                                        <a href="#"><button class="buttons-html5 btn btn-info btn-lg dropbtn" type="button"><span>Excel Download</span></button>
+                                                         </a>   
+                                                    </div>
+                                        </td>
+                                </tr>
+                            <tr>
+                            
+                                <td>
+                                        <h3 class="title">Concrete Supervision</h3>
+                                    </td>
+                            <td style="padding-top: 10px; width: 100%;">
+                                <div>
+                                        <label style="margin-left: -160px">Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="example" style="width: 16000%;">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                            <!--<td style="width: 1000px;" align="right">
+                                <div id="ColumnVisibility" style="margin: 10px 0px;">
+                                    <div class="dt-buttons">
+                                        <button class="dt-button buttons-columnVisibility active" tabindex="0" aria-controls="example" type="button">
+                                            <span>S.N.</span>
+                                        </button>
+                                        <button class="dt-button buttons-columnVisibility active" tabindex="0" aria-controls="example" type="button">
+                                            <span>Name</span>
+                                        </button>
+                                        <button class="dt-button buttons-columnVisibility active" tabindex="0" aria-controls="example" type="button">
+                                            <span>LoginId</span>
+                                        </button>
+                                        <button class="dt-button buttons-columnVisibility active" tabindex="0" aria-controls="example" type="button">
+                                            <span>Email Id</span>
+                                        </button>
+                                        <button class="dt-button buttons-columnVisibility active" tabindex="0" aria-controls="example" type="button">
+                                            <span>Mobile No.</span>
+                                        </button>
+                                        <button class="dt-button buttons-columnVisibility active" tabindex="0" aria-controls="example" type="button">
+                                            <span>Zone</span>
+                                        </button>
+                                        <button class="dt-button buttons-columnVisibility active" tabindex="0" aria-controls="example" type="button">
+                                            <span>State</span>
+                                        </button>
+                                        <button class="dt-button buttons-columnVisibility active" tabindex="0" aria-controls="example" type="button">
+                                            <span>Region</span>
+                                        </button>
+                                        <button class="dt-button buttons-columnVisibility active" tabindex="0" aria-controls="example" type="button">
+                                            <span>District</span></button>
+                                            <button class="dt-button buttons-columnVisibility active" tabindex="0" aria-controls="example" type="button">
+                                                <span>Role</span>
+                                            </button>
+                                            <button class="dt-button buttons-columnVisibility active" tabindex="0" aria-controls="example" type="button">
+                                                <span>Edit</span>
+                                            </button>
+                                            <button class="dt-button buttons-columnVisibility active" tabindex="0" aria-controls="example" type="button">
+                                                <span>Action</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                            </td>-->
+                        
+                    </tbody></table>
+            
+                    <div class="details">
+                        <div id="example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                            
+                            <br><div class="row">
+                                
+                                <div class="col-sm-10">
+                                     <div id="example_filter" class="dataTables_filter">
+                                                <label>Filter:
+                                                    <select name="example_length" aria-controls="example" class="form-control input-md">
+                                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                                    </select>
+                                                    
+                                                </label>
+                                        </div> 
+                                </div>
+                                <br>
+                                <div class="col-sm-2">
+                                    <div class="dataTables_length" id="example_length">
+                                        <label>Show 
+                                            <select name="example_length" aria-controls="example" class="form-control input-sm">
+                                                <option value="10">10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                            </select> entries
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="dataTables_scroll">
+
+                                        <div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+                                            <!--<div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 1359px; padding-right: 0px;">
+                                                <table class="display table table-bordered dataTable no-footer" role="grid" style="margin-left: 0px; width: 1359px;">
+                                                    <thead>
+                                                        <tr role="row">
+                                                            <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 20px;" aria-sort="ascending" aria-label="S.N.: activate to sort column descending">S.N.</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 46px;" aria-label="Name: activate to sort column ascending">Name</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 100px;" aria-label="LoginId: activate to sort column ascending">LoginId</th>
+                                                            <th style="text-align: center; width: 20px;" class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending">Role</th>
+                                                            <th style="text-align: center; width: 20px;" class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Edit: activate to sort column ascending">Edit</th>
+                                                            <th style="text-align: center; width: 20px;" class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div> -->
+                                        </div>
+                                        <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%; height: 554px;">
+                                            <table id="example" class="display table table-bordered dataTable no-footer" role="grid" aria-describedby="example_info">
+                                                <!-- <thead>
+                                                    <tr role="row" style="height: 0px;">
+                                                        <th class="sorting" aria-controls="example" rowspan="1" colspan="1" style="width: 28px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+                                                            <div class="dataTables_sizing" style="height:0;overflow:hidden;">S.N.</div>
+                                                        </th>
+                                                        <th class="sorting" aria-controls="example" rowspan="1" colspan="1" style="width: 46px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+                                                            <div class="dataTables_sizing" style="height:0;overflow:hidden;">Name</div>
+                                                        </th>
+                                                        <th class="sorting" aria-controls="example" rowspan="1" colspan="1" style="width: 201px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+                                                            <div class="dataTables_sizing" style="height:0;overflow:hidden;">LoginId</div>
+                                                        </th>
+                                                        <th style="text-align: center; width: 220px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting" aria-controls="example" rowspan="1" colspan="1">
+                                                            <div class="dataTables_sizing" style="height:0;overflow:hidden;">Email Id</div>
+                                                        </th>
+                                                        <th style="text-align: center; width: 56px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting" aria-controls="example" rowspan="1" colspan="1">
+                                                            <div class="dataTables_sizing" style="height:0;overflow:hidden;">Mobile No.</div>
+                                                        </th>
+                                                        <th style="text-align: center; width: 34px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting" aria-controls="example" rowspan="1" colspan="1">
+                                                            <div class="dataTables_sizing" style="height:0;overflow:hidden;">Zone</div>
+                                                        </th>
+                                                        <th style="text-align: center; width: 36px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting" aria-controls="example" rowspan="1" colspan="1">
+                                                            <div class="dataTables_sizing" style="height:0;overflow:hidden;">State</div>
+                                                        </th>
+                                                        <th style="text-align: center; width: 48px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting" aria-controls="example" rowspan="1" colspan="1">
+                                                            <div class="dataTables_sizing" style="height:0;overflow:hidden;">Region</div>
+                                                        </th>
+                                                        <th style="text-align: center; width: 49px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting" aria-controls="example" rowspan="1" colspan="1">
+                                                            <div class="dataTables_sizing" style="height:0;overflow:hidden;">District</div>
+                                                        </th>
+                                                        <th style="text-align: center; width: 37px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting" aria-controls="example" rowspan="1" colspan="1">
+                                                            <div class="dataTables_sizing" style="height:0;overflow:hidden;">Role</div>
+                                                        </th>
+                                                        <th style="text-align: center; width: 29px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting" aria-controls="example" rowspan="1" colspan="1">
+                                                            <div class="dataTables_sizing" style="height:0;overflow:hidden;">Edit</div>
+                                                        </th>
+                                                        <th style="text-align: center; width: 106px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" class="sorting" aria-controls="example" rowspan="1" colspan="1">
+                                                            <div class="dataTables_sizing" style="height:0;overflow:hidden;">Action</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                            -->
+                            <thead>
+                                    <tr role="row">
+                                        <th>S.N.</th>
+                                        <th>Date</th>
+                                        <th>Dhalai Attended By</th>
+                                        <th>IHB Name</th>
+                                        <th>Contact Number</th>
+                                        <th>Action</th>
+                                            
+                    
+                                    </tr>
+                                    </thead>
+                                    <tbody id="data_come" style="height: 500px;">
+                                <tr role="row">
+                                    <td>1</td>
+                                    <td>Shakun Vaidya</td>
+                                    <td>vaidya.shakun</td>
+                                    <td>vaidya.shakun</td>
+                                    <td>
+                                         Hello 
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-success">View More</a>
+                                    </td>
+            
+                                </tr>
+                                <tr role="row">
+                                        <td>2</td>
+                                        <td>Shakun Vaidya</td>
+                                        <td>vaidya.shakun</td>
+                                        <td>vaidya.shakun</td>
+                                        <td>
+                                             Hello 
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-success">View More</a>
+                                        </td>
+                                </tr>
+                                <tr role="row">
+                                        <td>3</td>
+                                        <td>Shakun Vaidya</td>
+                                        <td>vaidya.shakun</td>
+                                        <td>vaidya.shakun</td>
+                                        <td>
+                                             Hello 
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-success">View More</a>
+                                        </td>
+                
+                                    </tr>
+                                    <tr role="row">
+                                            <td>4</td>
+                                            <td>Shakun Vaidya</td>
+                                            <td>vaidya.shakun</td>
+                                            <td>vaidya.shakun</td>
+                                            <td>
+                                                 Hello 
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-success">View More</a>
+                                            </td>
+                                    </tr>
+                                    <tr role="row">
+                                            <td>5</td>
+                                            <td>Shakun Vaidya</td>
+                                            <td>vaidya.shakun</td>
+                                            <td>vaidya.shakun</td>
+                                            <td>
+                                                 Hello 
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-success">View More</a>
+                                            </td>
+                    
+                                        </tr>
+                                        <tr role="row">
+                                                <td>6</td>
+                                                <td>Shakun Vaidya</td>
+                                                <td>vaidya.shakun</td>
+                                                <td>vaidya.shakun</td>
+                                                <td>
+                                                     Hello 
+                                                </td>
+                                                <td>
+                                                    <a href="#" class="btn btn-success">View More</a>
+                                                </td>
+                                        </tr>
+                                        <tr role="row">
+                                                <td>7</td>
+                                                <td>Shakun Vaidya</td>
+                                                <td>vaidya.shakun</td>
+                                                <td>vaidya.shakun</td>
+                                                <td>
+                                                     Hello 
+                                                </td>
+                                                <td>
+                                                    <a href="#" class="btn btn-success">View More</a>
+                                                </td>
+                        
+                                            </tr>
+                                            <tr role="row">
+                                                    <td>8</td>
+                                                    <td>Shakun Vaidya</td>
+                                                    <td>vaidya.shakun</td>
+                                                    <td>vaidya.shakun</td>
+                                                    <td>
+                                                         Hello 
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-success">View More</a>
+                                                    </td>
+                                            </tr>
+                                            <tr role="row">
+                                                    <td>9</td>
+                                                    <td>Shakun Vaidya</td>
+                                                    <td>vaidya.shakun</td>
+                                                    <td>vaidya.shakun</td>
+                                                    <td>
+                                                         Hello 
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-success">View More</a>
+                                                    </td>
+                            
+                                                </tr>
+                                                <tr role="row">
+                                                        <td>10</td>
+                                                        <td>Shakun Vaidya</td>
+                                                        <td>vaidya.shakun</td>
+                                                        <td>vaidya.shakun</td>
+                                                        <td>
+                                                             Hello 
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-success">View More</a>
+                                                        </td>
+                                                </tr>
+                                                
+                                
+                                
+                                <!-- <tr role="row" class="odd">
+                                    <td class="sorting_1">3</td>
+                                    <td>Rajani</td>
+                                    <td>Rajani_Kanta_Sarangi</td>
+                                    <td align="center">sarangi.rajani@dalmiacement.com</td>
+                                    <td align="center">9102995965</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Odisha</td>
+                                    <td align="center">ODW</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Regional Head</td>
+                                   
+                                    <td align="center">
+                                         <a href="EditRegionalHead.jsp?id=MTY=" class="btn btn-success">Edit</a> 
+                                    </td>
+                                    <td align="center">
+                                        <form action="ResetPassword.jsp" method="get">
+                                            <input type="hidden" value="AdminMTY=" name="Uid"> <input type="submit" value="Reset Password" class="btn btn-success">
+                                        </form>
+                                    </td>
+            
+                                </tr><tr role="row" class="even">
+                                    <td class="sorting_1">4</td>
+                                    <td>Tushar Mohapatra</td>
+                                    <td>mohapatra.tushar</td>
+                                    <td align="center">mohapatra.tushar@dalmiacement.com</td>
+                                    <td align="center">7894424545</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Odisha</td>
+                                    <td align="center">ODC</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Regional Head</td>
+                                    
+                                    <td align="center">
+                                         <a href="EditRegionalHead.jsp?id=MTc=" class="btn btn-success">Edit</a> 
+                                    </td>
+                                    <td align="center">
+                                        <form action="ResetPassword.jsp" method="get">
+                                            <input type="hidden" value="AdminMTc=" name="Uid"> <input type="submit" value="Reset Password" class="btn btn-success">
+                                        </form>
+                                    </td>
+            
+                                </tr><tr role="row" class="odd">
+                                    <td class="sorting_1">5</td>
+                                    <td>Paili</td>
+                                    <td>Paili_Ghanashyam_Reddy</td>
+                                    <td align="center">reddy.paili@dalmiacement.com</td>
+                                    <td align="center">7328826186</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Odisha</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Angul</td>
+                                    <td align="center">TSO</td>
+                                   
+                                    <td align="center">
+                                         <a href="EditTso.jsp?id=MTg=" class="btn btn-success">Edit</a> 
+                                    </td>
+                                    <td align="center">
+                                        <form action="ResetPassword.jsp" method="get">
+                                            <input type="hidden" value="AdminMTg=" name="Uid"> <input type="submit" value="Reset Password" class="btn btn-success">
+                                        </form>
+                                    </td>
+            
+                                </tr><tr role="row" class="even">
+                                    <td class="sorting_1">6</td>
+                                    <td>Swadhin</td>
+                                    <td>Swadhin_Kumar_Ghantiali_Balangir</td>
+                                    <td align="center">ghantiali.swadhin@dalmiacement.com</td>
+                                    <td align="center">7682841921</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Odisha</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Balangir</td>
+                                    <td align="center">TSO</td>
+                                   
+                                    <td align="center">
+                                         <a href="EditTso.jsp?id=MTk=" class="btn btn-success">Edit</a> 
+                                    </td>
+                                    <td align="center">
+                                        <form action="ResetPassword.jsp" method="get">
+                                            <input type="hidden" value="AdminMTk=" name="Uid"> <input type="submit" value="Reset Password" class="btn btn-success">
+                                        </form>
+                                    </td>
+            
+                                </tr><tr role="row" class="odd">
+                                    <td class="sorting_1">7</td>
+                                    <td>Niroj</td>
+                                    <td>panigrahi.niroj</td>
+                                    <td align="center">Panigrahi.Niroj@dalmiacement.com</td>
+                                    <td align="center">7682841918</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Odisha</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Baleswar</td>
+                                    <td align="center">TSO</td>
+                                   
+                                    <td align="center">
+                                         <a href="EditTso.jsp?id=MjA=" class="btn btn-success">Edit</a> 
+                                    </td>
+                                    <td align="center">
+                                        <form action="ResetPassword.jsp" method="get">
+                                            <input type="hidden" value="AdminMjA=" name="Uid"> <input type="submit" value="Reset Password" class="btn btn-success">
+                                        </form>
+                                    </td>
+            
+                                </tr><tr role="row" class="even">
+                                    <td class="sorting_1">8</td>
+                                    <td>Abhishek</td>
+                                    <td>Abhishek_Mishra_Bargarh</td>
+                                    <td align="center">mishra.abhishek2@dalmiacement.com</td>
+                                    <td align="center">7752003091</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Odisha</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Bargarh</td>
+                                    <td align="center">TSO</td>
+                                  
+                                    <td align="center">
+                                         <a href="EditTso.jsp?id=MjE=" class="btn btn-success">Edit</a> 
+                                    </td>
+                                    <td align="center">
+                                        <form action="ResetPassword.jsp" method="get">
+                                            <input type="hidden" value="AdminMjE=" name="Uid"> <input type="submit" value="Reset Password" class="btn btn-success">
+                                        </form>
+                                    </td>
+            
+                                </tr><tr role="row" class="odd">
+                                    <td class="sorting_1">9</td>
+                                    <td>Amlan Jyoti Moharana</td>
+                                    <td>Amlan_Jyoti_Moharana</td>
+                                    <td align="center">Moharana.Amlan@dalmiacement.com</td>
+                                    <td align="center">7682841916</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Odisha</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Bhadrak</td>
+                                    <td align="center">TSO</td>
+                                    
+                                    <td align="center">
+                                         <a href="EditTso.jsp?id=MjI=" class="btn btn-success">Edit</a> 
+                                    </td>
+                                    <td align="center">
+                                        <form action="ResetPassword.jsp" method="get">
+                                            <input type="hidden" value="AdminMjI=" name="Uid"> <input type="submit" value="Reset Password" class="btn btn-success">
+                                        </form>
+                                    </td>
+            
+                                </tr><tr role="row" class="even">
+                                    <td class="sorting_1">10</td>
+                                    <td>Gopal</td>
+                                    <td>Gopal_Krushna_Pattanayak_Boudh</td>
+                                    <td align="center">patnayak.gopal1@dalmiaceent.com</td>
+                                    <td align="center">7328826187</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Odisha</td>
+                                    <td align="center">N/A</td>
+                                    <td align="center">Boudh</td>
+                                    <td align="center">TSO</td>
+                                   
+                                    <td align="center">
+                                         <a href="EditTso.jsp?id=MjM=" class="btn btn-success">Edit</a> 
+                                    </td>
+                                    <td align="center">
+                                        <form action="ResetPassword.jsp" method="get">
+                                            <input type="hidden" value="AdminMjM=" name="Uid"> <input type="submit" value="Reset Password" class="btn btn-success">
+                                        </form>
+                                    </td>
+            
+                                </tr> -->
+                            </tbody>
+            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5">
+                <div>Showing 1 to 10 of 43 entries
+                </div>
+            </div>
+            <div class="col-sm-7">
+                
+                    <ul class="pagination">
+                        <li class="disabled" id="example_previous">
+                            <a href="#" aria-controls="example" data-dt-idx="0" tabindex="0">Previous</a>
+                        </li>
+                        <li class="active">
+                            <a href="#" aria-controls="example" data-dt-idx="1" tabindex="0">1</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-controls="example" data-dt-idx="2" tabindex="0">2</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-controls="example" data-dt-idx="3" tabindex="0">3</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-controls="example" data-dt-idx="4" tabindex="0">4</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-controls="example" data-dt-idx="5" tabindex="0">5</a>
+                        </li>
+                        <li class="paginate_button next" id="example_next">
+                            <a href="#" aria-controls="example" data-dt-idx="6" tabindex="0">Next</a>
+                        </li>
+                    </ul>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+            <div class="container-fluid">
+                    <div class="admin_footer">Dalmia</div>
+            </div>
+</body>
+</html>

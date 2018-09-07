@@ -1,0 +1,1731 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+<title>Dalmia</title>
+<link rel="shortcut icon" href="/git/buildexpert_server1/DalmiaProject/WebContent/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="images/favicon.ico" type="image/ico" />
+<!-- Bootstrap framework -->
+<link type="text/css" href="css/admin-style.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<script type='text/javascript' src="js/jquery.min.js"></script>
+<script type='text/javascript' src="js/jquery.blockUI.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type='text/javascript'>
+
+    /*function showHide() {
+   var div = document.getElementById("hidden_div");
+   if (div.style.display == 'none') {
+     div.style.display = '';
+   }
+   else {
+     div.style.display = 'none';
+   }
+ } */
+
+ /*$(function () {
+    $('input').change(function () {
+        $('.next').toggle($("input").filter(function () {
+            var myType=$(this).attr("type");
+            if (myType === "checkbox") return !$(this).is(":checked");
+            if (myType==="radio"){
+                var myName = $(this).attr("name");
+                if (myName==="") return !$(this).is(":checked");
+                return $('input[name='+ myName +']:checked').length===0
+            }
+            return this.value === "";
+        }).length === 0)
+    });
+});*/
+
+/*$("div.toshow").show();*/
+
+
+   /* $(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".box").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".box").hide();
+            }
+        });
+    }).change();
+}); */
+
+$(function() {
+    $('#showdiv1').click(function() {
+        $('div[id^=div]').hide();
+        $('#div1').show();
+    });
+    $('#showdiv2').click(function() {
+        $('div[id^=div]').hide();
+        $('#div2').show();
+    });
+
+    $('#showdiv3').click(function() {
+        $('div[id^=div]').hide();
+        $('#div3').show();
+    });
+
+    $('#showdiv4').click(function() {
+        $('div[id^=div]').hide();
+        $('#div4').show();
+    });
+
+    $('#showdiv5').click(function() {
+        $('div[id^=div]').hide();
+        $('#div5').show();
+    });
+
+    $('#showdiv6').click(function() {
+        $('div[id^=div]').hide();
+        $('#div6').show();
+    });
+
+})
+
+function myFunctionTable2() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function myFunctionTable4() {
+    var y = document.getElementById("myDIV4");
+    if (y.style.display === "none") {
+        y.style.display = "block";
+    } else {
+        y.style.display = "none";
+    }
+}
+
+function myFunctionButton() {
+    var z = document.getElementById("myDIVButton");
+    if (z.style.display === "block") {
+        z.style.display = "none";
+    } else {
+        z.style.display = "none";
+    }
+}
+
+function myFunctionSearch() {
+    var a = document.getElementById("myDIVSearch");
+    if (a.style.display === "block") {
+        a.style.display = "none";
+    } else {
+        a.style.display = "none";
+    }
+}
+
+function myFunctionFooter() {
+    var b = document.getElementById("myDIVFooter");
+    if (b.style.display === "block") {
+        b.style.display = "none";
+    } else {
+        b.style.display = "none";
+    }
+}
+
+function myFunctionAllocate() {
+    var b = document.getElementById("myDIVAllocate");
+    if (b.style.display === "none") {
+        b.style.display = "block";
+    } else {
+        b.style.display = "block";
+    }
+}
+
+
+function myFunctionButtonS() {
+    var z = document.getElementById("myDIVButton");
+    if (z.style.display === "none") {
+        z.style.display = "block";
+    } else {
+        z.style.display = "block";
+    }
+}
+
+function myFunctionSearchS() {
+    var a = document.getElementById("myDIVSearch");
+    if (a.style.display === "none") {
+        a.style.display = "block";
+    } else {
+        a.style.display = "block";
+    }
+}
+
+function myFunctionFooterS() {
+    var b = document.getElementById("myDIVFooter");
+    if (b.style.display === "none") {
+        b.style.display = "block";
+    } else {
+        b.style.display = "block";
+    }
+}
+
+function myFunctionAllocateS() {
+    var b = document.getElementById("myDIVAllocate");
+    if (b.style.display === "block") {
+        b.style.display = "none";
+    } else {
+        b.style.display = "none";
+    }
+}
+
+
+$(document).ready(function(){
+    $(".b1").click(function(){
+        $(".b1").css("background-color", "#3AA1C0");
+        $(".b2").css("background-color", "#5bc0de");
+        $(".b3").css("background-color", "#5bc0de");
+        $(".b4").css("background-color", "#5bc0de");
+        $(".b5").css("background-color", "#5bc0de");
+        $(".b6").css("background-color", "#5bc0de");
+    });
+});
+$(document).ready(function(){
+    $(".b2").click(function(){
+        $(".b2").css("background-color", "#3AA1C0");
+        $(".b1").css("background-color", "#5bc0de");
+        $(".b3").css("background-color", "#5bc0de");
+        $(".b4").css("background-color", "#5bc0de");
+        $(".b5").css("background-color", "#5bc0de");
+        $(".b6").css("background-color", "#5bc0de");
+    });
+});
+$(document).ready(function(){
+    $(".b3").click(function(){
+        $(".b3").css("background-color", "#3AA1C0");
+        $(".b2").css("background-color", "#5bc0de");
+        $(".b1").css("background-color", "#5bc0de");
+        $(".b4").css("background-color", "#5bc0de");
+        $(".b5").css("background-color", "#5bc0de");
+        $(".b6").css("background-color", "#5bc0de");
+    });
+});
+$(document).ready(function(){
+    $(".b4").click(function(){
+        $(".b4").css("background-color", "#3AA1C0");
+        $(".b2").css("background-color", "#5bc0de");
+        $(".b3").css("background-color", "#5bc0de");
+        $(".b1").css("background-color", "#5bc0de");
+        $(".b5").css("background-color", "#5bc0de");
+        $(".b6").css("background-color", "#5bc0de");
+    });
+});
+$(document).ready(function(){
+    $(".b5").click(function(){
+        $(".b5").css("background-color", "#3AA1C0");
+        $(".b2").css("background-color", "#5bc0de");
+        $(".b3").css("background-color", "#5bc0de");
+        $(".b4").css("background-color", "#5bc0de");
+        $(".b1").css("background-color", "#5bc0de");
+        $(".b6").css("background-color", "#5bc0de");
+    });
+});
+$(document).ready(function(){
+    $(".b6").click(function(){
+        $(".b6").css("background-color", "#3AA1C0");
+        $(".b2").css("background-color", "#5bc0de");
+        $(".b3").css("background-color", "#5bc0de");
+        $(".b4").css("background-color", "#5bc0de");
+        $(".b5").css("background-color", "#5bc0de");
+        $(".b1").css("background-color", "#5bc0de");
+    });
+});
+
+
+
+
+    
+</script>
+<style>
+   
+
+	.admin_footer {
+	background-color: #e5e5e5;
+    color: #333333;
+    text-align: center;
+    font-size: 12px;
+    line-height: 40px;
+    bottom: 0px;
+    width: 100%;
+    position:fixed;
+	bottom: 0px;
+	margin-left: -15px;
+	}
+
+	.admin_header {
+    background-color: #eeeee7;
+}
+
+.admin_logo {
+    margin: 10px 0 10px 0px;
+    float: left;
+}
+
+.admin_version {
+    margin: 34px 30px 12px 0px;
+    float: right;
+    font-size: 12px;
+    color: #000;
+}
+
+.admin_left {
+    float: left;
+    width: 850px;
+    margin-top: 0px;
+}
+
+.admin_menu {
+    background-color: #283563;
+    padding: 0 0 0 0px;
+    margin-bottom: 20px;
+}
+
+.admin_menu ul {
+    list-style: none;
+}
+
+ul {
+    margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.admin_menu ul li {
+    list-style: none;
+    display: inline;
+    line-height: 40px;
+    font-size: 14px;
+    position: relative;
+    color: #FFF;
+}
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #46b8da;}
+
+select.myTable {
+    background-color: #f5f5f5;
+    /* color: #999; */
+    border: 0px;
+     outline: 0px;
+     -webkit-appearance: button; 
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    /* -webkit-padding-end: 20px; */
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    /* background-image: url(../images/select-arrow.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5); */
+    /* background-position: center right; */
+    /* background-repeat: no-repeat; */
+    /* border: 1px solid #AAA; */
+    /* color: #e5e5e5; */
+    font-size: inherit;
+    margin: 0;
+    overflow: hidden;
+    
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    text-decoration-style: none;
+
+
+    color: black !important;
+    
+    text-decoration: none;
+    display: block;
+}
+
+option.monitor {
+    
+    color: black !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+select.myTable option.monitor:checked {
+        background: none;
+    background-color: #f5f5f5 !important;
+    color: black !important;   
+        
+    }
+    .myColor {
+        color: black !important;
+    }
+
+    .monitor:active {
+        background-color: #f5f5f5 !important;
+         
+    }
+    /*.my_active:focus {
+        background-color: #2392AD;
+    }*/
+    
+/*    table tbody, table thead
+{
+    display: block;
+}
+
+table tbody 
+{
+   overflow: auto;
+    height: 125px;
+}
+
+table {
+    width: 350px; 
+}
+
+th
+{
+    width: 192px;
+}
+th.morewidth {
+    width: 287px;
+}
+td.morewidth {
+    width: 287px;
+}
+th.morewidth1 {
+    width: 230px;
+}
+td.morewidth1 {
+    width: 230px;
+}
+td
+{
+    width: 192px;
+}*/
+
+.out:focus {
+    outline: none;
+}
+
+
+</style>
+</head>
+<body>
+        <div id="maincontainer" class="clearfix">
+				<header>
+				<div class="container">
+					<div class="admin_header">
+						<div class="admin_logo">
+						<img src="images/logo2.png" width="200" height="auto">
+						</div>
+						<div class="admin_version">
+							<div class="admin_left welcome_admin">
+							<div class="col-lg-5"><h1>Welcome to</h1>
+							<span id="lblusername">
+							<img src="images/user.png" width="30" height="auto"> techsupport@netcommlabs.com</span></div>
+							<div class="col-lg-3"><h2>Last Login </h2>
+							<span><img src="images/time.png" width="30" height="auto">2018.07.23.12.38.33</span></div>
+							<div class="col-lg-3"><h2>Role(Admin) </h2> <span>Admin</span></div>
+							<div class="col-lg-1" style="margin-top:10px;">
+			<form action="#" method="post">
+			 <input type="submit" value="Logout" class="btn btn-danger pull-right">
+			 </form>
+							</div>
+								
+							</div>
+						</div>
+					</div></div>
+					<div class="clearfix"></div>
+					<div class="admin_menu">
+					<div class="container">
+						<ul>
+		
+							<li class="dropdown" onclick="gotoHome()"><a href="Home.html">Back to DashBoard</a></li>
+						</ul>
+		
+					</div></div>
+		
+		
+				</header>
+            </div>
+            
+            <div class="container">
+                    <table class="col-lg-12">
+                        <tbody>
+                            <tr>
+                            
+                            <td style="padding-top: 10px;">
+                                 
+                            </td>
+                            <td style="padding-top: 10px;">
+                                    <div class="container">
+                                        <div class="row" style="margin-left: -130px;">
+                                                 <div class="col-md-1" style="width: 11%; padding-top: 10px;"><a href="#" id="showdiv1"><button onclick="myFunctionButtonS(); myFunctionSearchS(); myFunctionFooterS(); myFunctionAllocateS();" class="b1 buttons-html5 btn btn-info btn-sm dropbtn out" type="button" style="width: 110%; height: 36px;"><span>Summary</span></button>
+                                                 </a></div> 
+                                            
+                                            <div class="col-md-1" style="width: 14%; padding-top: 10px;">
+                                                    <a href="#" id="showdiv3"><button onclick="myFunctionButtonS(); myFunctionSearchS(); myFunctionFooterS(); myFunctionAllocateS();" class="b2 buttons-html5 btn btn-info btn-sm dropbtn out" type="button" style="width: 105%; height: 36px;"><span>TSO wise Summary</span></button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-1" style="width: 10%; padding-top: 10px;">
+                                                        <a href="#" id="showdiv2"><button onclick="myFunctionButtonS(); myFunctionSearchS(); myFunctionFooterS(); myFunctionAllocateS();" class="b3 buttons-html5 btn btn-info btn-sm dropbtn out" type="button" style="width: 110%; height: 36px;"><span>Master</span></button>
+                                                        </a>
+                                                    </div>
+                                                <div class="col-md-2" style="width: 13%; padding-top: 10px;">
+                                                        <a href="#" id="showdiv4"><button onclick="myFunctionButton(); myFunctionSearch(); myFunctionFooter(); myFunctionAllocate();" class="b4 buttons-html5 btn btn-info btn-sm dropbtn out" type="button" style="width: 110%; height: 36px;"><span>Gift Allocation</span></button>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-2" style="width: 12%; padding-top: 10px;">
+                                                            <a href="#" id="showdiv5"><button onclick="myFunctionButton(); myFunctionSearch(); myFunctionFooter(); myFunctionAllocateS();" class="b5 buttons-html5 btn btn-info btn-sm dropbtn out" type="button" style="width: 110%; height: 36px;"><span>Transfer Gifts</span></button>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-md-2" style="width: 12%; padding-top: 10px;">
+                                                                <a href="#" id="showdiv6"><button onclick="myFunctionButtonS(); myFunctionSearchS(); myFunctionFooterS(); myFunctionAllocateS();" class="b6 buttons-html5 btn btn-info btn-sm dropbtn out" type="button" style="width: 110%; height: 36px;"><span>Reports</span></button>
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                    <a href="#"><button class="buttons-html5 btn btn-info btn-lg dropbtn" type="button" style="margin-left: 30px;"><span>Excel Download</span></button>
+                                                                    </a>
+                                                                </div>
+                                        </div>
+                                     </div>          
+                                        
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 style="width: 150%;">Gift Inventory</h3>
+                            </td>
+                            <td style="padding-top: 10px; padding-left: 850px;">
+                                    <div id="myDIVSearch" style="display: block;">
+                                        <label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="example" style="width: 113%;">
+                                        </label>
+                                    </div>
+                                </td>
+                           
+                        </tr>
+                    </tbody>
+                </table>
+                
+                
+            
+                    <div class="details">
+                        <div id="example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                            
+                            <div class="row" id="myDIVButton" style="display: block;">
+                                
+                                <div class="col-sm-10">
+                                     <div id="example_filter" class="dataTables_filter" style="padding-top: 15px">
+                                                <label>Filter:
+                                                    <select name="example_length" aria-controls="example" class="form-control input-md">
+                                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                                        <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                                    </select>
+                                                    
+                                                </label>
+                                        </div> 
+                                </div>
+                                <br>
+                                <div class="col-sm-2">
+                                    <div class="dataTables_length" id="example_length">
+                                        <label>Show 
+                                            <select name="example_length" aria-controls="example" class="form-control input-sm" style="padding-top: 0px;">
+                                                <option value="10">10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                            </select> entries
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+
+
+
+                            <div class="row" id="div1" style="padding-top: 25px;">
+                                <div class="col-sm-12">
+                                    <div class="dataTables_scroll">
+
+                                        
+                                        <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%; height: 554px;">
+                                            <table id="example" class="display table table-bordered dataTable no-footer" role="grid" aria-describedby="example_info">
+                                                
+                            <thead>
+                                    <tr role="row">
+                                        <th>S.N.</th>
+                                        <th>Gift Item</th>
+                                        <th>Total Quantity</th>
+                                        <th>Allocated</th>
+                                        <th>Distributed</th>
+                                        <th>Remaining</th>
+                                            
+                    
+                                    </tr>
+                                    </thead>
+                                    <tbody id="data_come" style="height: 500px;">
+                                <tr role="row">
+                                    <td>1</td>
+                                    <td>Shakun Vaidya</td>
+                                    <td>vaidya.shakun</td>
+                                    <td>vaidya.shakun</td>
+                                    <td>
+                                         Hello 
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-success">View More</a>
+                                    </td>
+            
+                                </tr>
+                                <tr role="row">
+                                        <td>2</td>
+                                        <td>Shakun Vaidya</td>
+                                        <td>vaidya.shakun</td>
+                                        <td>vaidya.shakun</td>
+                                        <td>
+                                             Hello 
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-success">View More</a>
+                                        </td>
+                                </tr>
+                                <tr role="row">
+                                        <td>3</td>
+                                        <td>Shakun Vaidya</td>
+                                        <td>vaidya.shakun</td>
+                                        <td>vaidya.shakun</td>
+                                        <td>
+                                             Hello 
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn-success">View More</a>
+                                        </td>
+                
+                                    </tr>
+                                    <tr role="row">
+                                            <td>4</td>
+                                            <td>Shakun Vaidya</td>
+                                            <td>vaidya.shakun</td>
+                                            <td>vaidya.shakun</td>
+                                            <td>
+                                                 Hello 
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-success">View More</a>
+                                            </td>
+                                    </tr>
+                                    <tr role="row">
+                                            <td>5</td>
+                                            <td>Shakun Vaidya</td>
+                                            <td>vaidya.shakun</td>
+                                            <td>vaidya.shakun</td>
+                                            <td>
+                                                 Hello 
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-success">View More</a>
+                                            </td>
+                    
+                                        </tr>
+                                        <tr role="row">
+                                                <td>6</td>
+                                                <td>Shakun Vaidya</td>
+                                                <td>vaidya.shakun</td>
+                                                <td>vaidya.shakun</td>
+                                                <td>
+                                                     Hello 
+                                                </td>
+                                                <td>
+                                                    <a href="#" class="btn btn-success">View More</a>
+                                                </td>
+                                        </tr>
+                                        <tr role="row">
+                                                <td>7</td>
+                                                <td>Shakun Vaidya</td>
+                                                <td>vaidya.shakun</td>
+                                                <td>vaidya.shakun</td>
+                                                <td>
+                                                     Hello 
+                                                </td>
+                                                <td>
+                                                    <a href="#" class="btn btn-success">View More</a>
+                                                </td>
+                        
+                                            </tr>
+                                            <tr role="row">
+                                                    <td>8</td>
+                                                    <td>Shakun Vaidya</td>
+                                                    <td>vaidya.shakun</td>
+                                                    <td>vaidya.shakun</td>
+                                                    <td>
+                                                         Hello 
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-success">View More</a>
+                                                    </td>
+                                            </tr>
+                                            <tr role="row">
+                                                    <td>9</td>
+                                                    <td>Shakun Vaidya</td>
+                                                    <td>vaidya.shakun</td>
+                                                    <td>vaidya.shakun</td>
+                                                    <td>
+                                                         Hello 
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-success">View More</a>
+                                                    </td>
+                            
+                                                </tr>
+                                                <tr role="row">
+                                                        <td>10</td>
+                                                        <td>Shakun Vaidya</td>
+                                                        <td>vaidya.shakun</td>
+                                                        <td>vaidya.shakun</td>
+                                                        <td>
+                                                             Hello 
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-success">View More</a>
+                                                        </td>
+                                                </tr>
+                                                
+                                
+                                
+                                
+                            </tbody>
+            
+                        </table></div>
+
+                        
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="row" id="div2" style="display: none">
+            <div class="row" style="margin-top: 10px; margin-bottom: 30px;">
+            
+                <div class="col-md-5">
+                        <a href="#"><button onclick="myFunctionTable2()" class="btn btn-success btn-lg" style="margin-left: 15px;">Add New</button></a>
+                </div>
+            </div>
+            <div class="row" id="myDIV" style="display: none;">
+            
+                    <div class="col-md-12">
+                            <form>
+                                <div class="container" style="margin-top: 20px; margin-bottom: 30px;">    
+                                    <div class="row formset" style="margin-bottom: 30px;">
+                                            <div class="col-md-4">
+                                                    <label for="gift_item">
+                                                            Gift Item :
+                                                        </label>
+                                                        <select class="form-control" style="width: 60%;">
+                                                                <option>Choose the gift item</option>
+                                                                <option value="one">Item 1</option>
+                                                                <option value="two">Item 2</option>
+                                                                <option value="three">Item 3</option>
+                                                                <option value="four">Item 4</option>
+                                                                <option value="five">Item 5</option>
+                                                            </select>
+                                            </div>
+                                            <div class="col-md-4">
+                                                    <label for="quantity">
+                                                            Quantity :
+                                                        </label> <input type="text" class="form-control" id="quant">
+                                            </div>
+                                            <div class="col-md-4">
+                                                    <button type="submit" class="btn btn-default btn-success btn-md">Submit</button>     
+                                                        
+                                            </div></div>
+
+                                           
+
+                                                    
+                                                    </div>
+                            </form>
+                    </div>
+                </div>
+                <div class="col-sm-12 next">
+                    <div class="dataTables_scroll">
+
+                        
+                        <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%; height: 554px;">
+                            <table id="example" class="display table table-bordered dataTable no-footer" role="grid" aria-describedby="example_info">
+                                
+            <thead>
+                    <tr role="row">
+                        <th class="morewidth">S.N.</th>
+                        <th class="morewidth">Gift Type</th>
+                        <th class="morewidth">Total Quantity</th>
+                        <th class="morewidth">Action</th>
+                       <!-- <th>Closing KM</th>
+                        <th>Action</th> -->
+                            
+    
+                    </tr>
+                    </thead>
+                    <tbody id="data_come" style="height: 500px;">
+                <tr role="row">
+                    <td class="morewidth">1</td>
+                    <td class="morewidth">Shakun Vaidya</td>
+                    <td class="morewidth">vaidya.shakun</td>
+                    <!--<td>vaidya.shakun</td>
+                    <td>
+                         Hello 
+                    </td>-->
+                    <td class="morewidth">
+                        <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                    </td>
+
+                </tr>
+                <tr role="row">
+                        <td class="morewidth">2</td>
+                        <td class="morewidth">Shakun Vaidya</td>
+                        <td class="morewidth">vaidya.shakun</td>
+                        <!--<td>vaidya.shakun</td>
+                        <td>
+                             Hello 
+                        </td>-->
+                        <td class="morewidth">
+                            <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                        </td>
+    
+                    </tr>
+                    <tr role="row">
+                            <td class="morewidth">3</td>
+                            <td class="morewidth">Shakun Vaidya</td>
+                            <td class="morewidth">vaidya.shakun</td>
+                            <!--<td>vaidya.shakun</td>
+                            <td>
+                                 Hello 
+                            </td>-->
+                            <td class="morewidth">
+                                <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                            </td>
+        
+                        </tr>
+                        <tr role="row">
+                                <td class="morewidth">4</td>
+                                <td class="morewidth">Shakun Vaidya</td>
+                                <td class="morewidth">vaidya.shakun</td>
+                                <!--<td>vaidya.shakun</td>
+                                <td>
+                                     Hello 
+                                </td>-->
+                                <td class="morewidth">
+                                    <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                                </td>
+            
+                            </tr>
+                            <tr role="row">
+                                    <td class="morewidth">5</td>
+                                    <td class="morewidth">Shakun Vaidya</td>
+                                    <td class="morewidth">vaidya.shakun</td>
+                                    <!--<td>vaidya.shakun</td>
+                                    <td>
+                                         Hello 
+                                    </td>-->
+                                    <td class="morewidth">
+                                        <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                                    </td>
+                
+                                </tr>
+                        <tr role="row">
+                                <td class="morewidth">6</td>
+                                <td class="morewidth">Shakun Vaidya</td>
+                                <td class="morewidth">vaidya.shakun</td>
+                                <!--<td>vaidya.shakun</td>
+                                <td>
+                                     Hello 
+                                </td>-->
+                                <td class="morewidth">
+                                    <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                                </td>
+            
+                            </tr>
+                            <tr role="row">
+                                    <td class="morewidth">7</td>
+                                    <td class="morewidth">Shakun Vaidya</td>
+                                    <td class="morewidth">vaidya.shakun</td>
+                                    <!--<td>vaidya.shakun</td>
+                                    <td>
+                                         Hello 
+                                    </td>-->
+                                    <td class="morewidth">
+                                        <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                                    </td>
+                
+                                </tr>
+                                <tr role="row">
+                                        <td class="morewidth">8</td>
+                                        <td class="morewidth">Shakun Vaidya</td>
+                                        <td class="morewidth">vaidya.shakun</td>
+                                        <!--<td>vaidya.shakun</td>
+                                        <td>
+                                             Hello 
+                                        </td>-->
+                                        <td class="morewidth">
+                                            <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                                        </td>
+                    
+                                    </tr>
+                                    <tr role="row">
+                                            <td class="morewidth">9</td>
+                                            <td class="morewidth">Shakun Vaidya</td>
+                                            <td class="morewidth">vaidya.shakun</td>
+                                            <!--<td>vaidya.shakun</td>
+                                            <td>
+                                                 Hello 
+                                            </td>-->
+                                            <td class="morewidth">
+                                                <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                                            </td>
+                        
+                                        </tr>
+                                        <tr role="row">
+                                                <td class="morewidth">10</td>
+                                                <td class="morewidth">Shakun Vaidya</td>
+                                                <td class="morewidth">vaidya.shakun</td>
+                                                <!--<td>vaidya.shakun</td>
+                                                <td>
+                                                     Hello 
+                                                </td>-->
+                                                <td class="morewidth">
+                                                    <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                                                </td>
+                            
+                                            </tr>
+                                
+                
+                
+                
+            </tbody>
+
+        </table></div>
+
+        
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="row" id="div3" style="display:none; padding-top: 25px;">
+        <div class="col-sm-12">
+            <div class="dataTables_scroll">
+
+                
+                <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%; height: 450px;">
+                    <table id="example" class="display table table-bordered dataTable no-footer" role="grid" aria-describedby="example_info">
+                        
+    <thead>
+            <tr role="row">
+                <th>TSO Name</th>
+                <th>Gift Item</th>
+                <th>Allocated</th>
+                <th>Distributed</th>
+                <th>Transferred</th>
+                <th>Remaining</th>
+                    
+
+            </tr>
+            </thead>
+            <tbody id="data_come" style="height: 500px;">
+        <tr role="row">
+            <td>1</td>
+            <td>Shakun Vaidya</td>
+            <td>vaidya.shakun</td>
+            <td>vaidya.shakun</td>
+            <td>
+                 Hello 
+            </td>
+            <td>
+                    Hello 
+               </td>
+
+        </tr>
+        <tr role="row">
+                <td>2</td>
+                <td>Shakun Vaidya</td>
+                <td>vaidya.shakun</td>
+                <td>vaidya.shakun</td>
+                <td>
+                     Hello 
+                </td>
+                <td>
+                        Hello 
+                   </td>
+        </tr>
+        <tr role="row">
+                <td>3</td>
+                <td>Shakun Vaidya</td>
+                <td>vaidya.shakun</td>
+                <td>vaidya.shakun</td>
+                <td>
+                     Hello 
+                </td>
+                <td>
+                        Hello 
+                   </td>
+
+            </tr>
+            <tr role="row">
+                    <td>4</td>
+                    <td>Shakun Vaidya</td>
+                    <td>vaidya.shakun</td>
+                    <td>vaidya.shakun</td>
+                    <td>
+                         Hello 
+                    </td>
+                    <td>
+                            Hello 
+                       </td>
+            </tr>
+            <tr role="row">
+                    <td>5</td>
+                    <td>Shakun Vaidya</td>
+                    <td>vaidya.shakun</td>
+                    <td>vaidya.shakun</td>
+                    <td>
+                         Hello 
+                    </td>
+                    <td>
+                            Hello 
+                       </td>
+
+                </tr>
+                <tr role="row">
+                        <td>6</td>
+                        <td>Shakun Vaidya</td>
+                        <td>vaidya.shakun</td>
+                        <td>vaidya.shakun</td>
+                        <td>
+                             Hello 
+                        </td>
+                        <td>
+                                Hello 
+                           </td>
+                </tr>
+                <tr role="row">
+                        <td>7</td>
+                        <td>Shakun Vaidya</td>
+                        <td>vaidya.shakun</td>
+                        <td>vaidya.shakun</td>
+                        <td>
+                             Hello 
+                        </td>
+                        <td>
+                                Hello 
+                           </td>
+
+                    </tr>
+                    <tr role="row">
+                            <td>8</td>
+                            <td>Shakun Vaidya</td>
+                            <td>vaidya.shakun</td>
+                            <td>vaidya.shakun</td>
+                            <td>
+                                 Hello 
+                            </td>
+                            <td>
+                                    Hello 
+                               </td>
+                    </tr>
+                    <tr role="row">
+                            <td>9</td>
+                            <td>Shakun Vaidya</td>
+                            <td>vaidya.shakun</td>
+                            <td>vaidya.shakun</td>
+                            <td>
+                                 Hello 
+                            </td>
+                            <td>
+                                    Hello 
+                               </td>
+    
+                        </tr>
+                        <tr role="row">
+                                <td>10</td>
+                                <td>Shakun Vaidya</td>
+                                <td>vaidya.shakun</td>
+                                <td>vaidya.shakun</td>
+                                <td>
+                                     Hello 
+                                </td>
+                                <td>
+                                        Hello 
+                                   </td>
+                        </tr>
+                        
+        
+        
+        
+    </tbody>
+
+</table></div>
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="row" id="div4" style="display: none">
+        
+        <div class="row" style="margin-top: 30px;">
+        
+                <div class="col-md-12">
+                        <form>
+                            <div class="container" style="margin-bottom: 25px;">    
+                                <div class="row" style="margin-bottom: 20px;">
+                                        <div class="col-md-3">
+                                                <label for="tsoname">
+                                                        TSO Name :
+                                                    </label>
+                                                    <select class="form-control" style="width: 65%;">
+                                                            <option>Select the name of TSO</option>
+                                                            <option value="none">Name 1</option>
+                                                            <option value="ntwo">Name 2</option>
+                                                            <option value="nthree">Name 3</option>
+                                                            <option value="nfour">Name 4</option>
+                                                            <option value="nfive">Name 5</option>
+                                                        </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                                <label for="giftofname">
+                                                        Gift Item :
+                                                    </label>
+                                                    <select class="form-control" style="width: 65%;">
+                                                            <option>Select the type of gift</option>
+                                                            <option value="none">Gift 1</option>
+                                                            <option value="gtwo">Gift 2</option>
+                                                            <option value="gthree">Gift 3</option>
+                                                            <option value="gfour">Gift 4</option>
+                                                            <option value="gfive">Gift 5</option>
+                                                        </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                                <label for="quantity">
+                                                        Quantity :
+                                                    </label> <input type="text" class="form-control" id="quant">
+                                        </div>
+                                        <div class="col-md-3">
+                                                <button type="submit" class="btn btn-default btn-success btn-md">Submit</button>     
+                                                    
+                                        </div></div>
+
+                                       
+
+                                                
+                                                </div>
+                        </form>
+                </div>
+            </div>
+            <div class="col-sm-12 next">
+                <div class="dataTables_scroll">
+
+                    
+                    <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%; height: 554px;">
+                        <table id="example" class="display table table-bordered dataTable no-footer" role="grid" aria-describedby="example_info">
+                            
+        <thead>
+                <tr role="row">
+                    <th class="morewidth1">S.N.</th>
+                    <th class="morewidth1">TSO Name</th>
+                    <th class="morewidth1">Gift Type</th>
+                    <th class="morewidth1">Total Quantity</th>
+                    <th class="morewidth1">Action</th>
+                   
+                    <!--<th>Action</th> -->
+                        
+
+                </tr>
+                </thead>
+                <tbody id="data_come" style="height: 500px;">
+            <tr role="row">
+                <td class="morewidth1">1</td>
+                <td class="morewidth1">Shakun Vaidya</td>
+                <td class="morewidth1">vaidya.shakun</td>
+                <td class="morewidth1">vaidya.shakun</td>
+                <!--<td>
+                     Hello 
+                </td>-->
+                <td class="morewidth1">
+                    <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                </td>
+
+            </tr>
+            <tr role="row">
+                    <td class="morewidth1">2</td>
+                    <td class="morewidth1">Shakun Vaidya</td>
+                    <td class="morewidth1">vaidya.shakun</td>
+                    <td class="morewidth1">vaidya.shakun</td>
+                    <!--<td>
+                         Hello 
+                    </td>-->
+                    <td class="morewidth1">
+                        <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                    </td>
+
+                </tr>
+                <tr role="row">
+                        <td class="morewidth1">3</td>
+                        <td class="morewidth1">Shakun Vaidya</td>
+                        <td class="morewidth1">vaidya.shakun</td>
+                        <td class="morewidth1">vaidya.shakun</td>
+                        <!--<td>
+                             Hello 
+                        </td>-->
+                        <td class="morewidth1">
+                            <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                        </td>
+    
+                    </tr>
+                    <tr role="row">
+                            <td class="morewidth1">4</td>
+                            <td class="morewidth1">Shakun Vaidya</td>
+                            <td class="morewidth1">vaidya.shakun</td>
+                            <td class="morewidth1">vaidya.shakun</td>
+                            <!--<td>
+                                 Hello 
+                            </td>-->
+                            <td>
+                                <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                            </td>
+        
+                        </tr>
+                        <tr role="row">
+                                <td class="morewidth1">5</td>
+                                <td class="morewidth1">Shakun Vaidya</td>
+                                <td class="morewidth1">vaidya.shakun</td>
+                                <td class="morewidth1">vaidya.shakun</td>
+                                <!--<td>
+                                     Hello 
+                                </td>-->
+                                <td class="morewidth1">
+                                    <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                                </td>
+            
+                            </tr>
+                    <tr role="row">
+                            <td class="morewidth1">6</td>
+                            <td class="morewidth1">Shakun Vaidya</td>
+                            <td class="morewidth1">vaidya.shakun</td>
+                            <td class="morewidth1">vaidya.shakun</td>
+                            <!--<td>
+                                 Hello 
+                            </td>-->
+                            <td class="morewidth1">
+                                <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                            </td>
+        
+                        </tr>
+                        <tr role="row">
+                                <td class="morewidth1">7</td>
+                                <td class="morewidth1">Shakun Vaidya</td>
+                                <td class="morewidth1">vaidya.shakun</td>
+                                <td class="morewidth1">vaidya.shakun</td>
+                                <!--<td>
+                                     Hello 
+                                </td>-->
+                                <td class="morewidth1">
+                                    <a href="#" class="btn btn-success">Edit</a> / <a href="#" class="btn btn-success">Delete</a>
+                                </td>
+            
+                            </tr>
+                            <tr role="row">
+                                    <td class="morewidth1">8</td>
+                                    <td class="morewidth1">Shakun Vaidya</td>
+                                    <td class="morewidth1">vaidya.shakun</td>
+                                    <td class="morewidth1">vaidya.shakun</td>
+                                    <!--<td>
+                                         Hello 
+                                    </td>-->
+                                    <td class="morewidth1">
+                                        <a href="#" class="btn btn-success">Add</a> / <a href="#" class="btn btn-success">Delete</a>
+                                    </td>
+                
+                                </tr>
+                                <tr role="row">
+                                        <td class="morewidth1">9</td>
+                                        <td class="morewidth1">Shakun Vaidya</td>
+                                        <td class="morewidth1">vaidya.shakun</td>
+                                        <td class="morewidth1">vaidya.shakun</td>
+                                        <!--<td>
+                                             Hello 
+                                        </td>-->
+                                        <td class="morewidth1">
+                                            <a href="#" class="btn btn-success">Add</a> / <a href="#" class="btn btn-success">Delete</a>
+                                        </td>
+                    
+                                    </tr>
+                                    <tr role="row">
+                                            <td class="morewidth1">10</td>
+                                            <td class="morewidth1">Shakun Vaidya</td>
+                                            <td class="morewidth1">vaidya.shakun</td>
+                                            <td class="morewidth1">vaidya.shakun</td>
+                                            <!--<td>
+                                                 Hello 
+                                            </td>-->
+                                            <td class="morewidth1">
+                                                <a href="#" class="btn btn-success">Add</a> / <a href="#" class="btn btn-success">Delete</a>
+                                            </td>
+                        
+                                        </tr>
+                            
+            
+            
+            
+        </tbody>
+
+    </table></div>
+
+    
+
+
+
+</div>
+</div>
+</div>
+
+
+
+<div class="row" id="div5" style="display: none">
+        
+        <div class="row" style="margin-top: 45px;">
+        
+                <div class="col-md-12">
+                        <form>
+                            <div class="container" style="margin-bottom: 25px;">    
+                                
+
+                                    <div class="row" style="margin-bottom: 20px;">
+                                            <div class="col-md-1">
+                                                                                                
+                                                </div>
+                                            <div class="col-md-5">
+                                                    <label for="tsoname">
+                                                            <strong>From :</strong>
+                                                        </label>
+                                                        
+                                            </div>
+                                            <div class="col-md-3">
+                                                    <label for="tsoname">
+                                                            <strong>To :</strong>
+                                                        </label>
+                                                        
+                                            </div>
+                                            
+                                            <div class="col-md-3">
+                                                      
+                                                        
+                                            </div></div>
+
+
+
+
+                                <div class="row formset" style="margin-bottom: 20px;">
+                                        <div class="col-md-1">
+                                                                                                
+                                            </div>
+                                        <div class="col-md-5">
+                                                <label for="tsoname">
+                                                        TSO Name :
+                                                    </label>
+                                                    <select class="form-control" style="width: 65%;">
+                                                            <option>Select the name of TSO</option>
+                                                            <option value="none">Name 1</option>
+                                                            <option value="ntwo">Name 2</option>
+                                                            <option value="nthree">Name 3</option>
+                                                            <option value="nfour">Name 4</option>
+                                                            <option value="nfive">Name 5</option>
+                                                        </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                                <label for="tsoname">
+                                                        TSO Name :
+                                                    </label>
+                                                    <select class="form-control" style="width: 65%;">
+                                                            <option>Select the name of TSO</option>
+                                                            <option value="none">Name 1</option>
+                                                            <option value="ntwo">Name 2</option>
+                                                            <option value="nthree">Name 3</option>
+                                                            <option value="nfour">Name 4</option>
+                                                            <option value="nfive">Name 5</option>
+                                                        </select>
+                                        </div>
+                                        
+                                        <div class="col-md-3">
+                                                     
+                                                    
+                                        </div></div>
+
+                                       
+
+                                                
+                                                </div>
+
+
+
+                                                <div class="container" style="margin-bottom: 25px;">    
+                                                        <div class="row formset" style="margin-bottom: 20px;">
+                                                                <div class="col-md-1">
+                                                                                                
+                                                                    </div>
+                                                                <div class="col-md-5">
+                                                                        <label for="giftofname">
+                                                                                Gift Item :
+                                                                            </label>
+                                                                            <select class="form-control" style="width: 68%;">
+                                                                                    <option>Select the type of gift</option>
+                                                                                    <option value="none">Gift 1</option>
+                                                                                    <option value="gtwo">Gift 2</option>
+                                                                                    <option value="gthree">Gift 3</option>
+                                                                                    <option value="gfour">Gift 4</option>
+                                                                                    <option value="gfive">Gift 5</option>
+                                                                                </select>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                        <label for="quantity">
+                                                                                Quantity :
+                                                                            </label> <input type="text" class="form-control" id="quant" style="width: 72%;">
+                                                                </div>
+                                                                
+                                                                <div class="col-md-3">
+                                                                             
+                                                                            
+                                                                </div></div>
+                        
+                                                               
+                        
+                                                                        
+                                                                        </div>
+
+
+
+
+                                                                    <div class="container" style="margin-bottom: 25px;">    
+                                                                                <div class="row formset" style="margin-bottom: 20px;">
+                                                                                        <div class="col-md-5">
+                                                                                                
+                                                                                            </div>
+                                                                                        <div class="col-md-3">
+                                                                                                <button type="submit" class="btn btn-default btn-success btn-lg">Submit</button>
+                                                                                        </div>
+                                                                                        <div class="col-md-2">
+                                                                                                   
+                                                                                        </div>
+                                                                                        
+                                                                                        <div class="col-md-2">
+                                                                                                     
+                                                                                                    
+                                                                                        </div></div>
+                                                
+                                                                                       
+                                                
+                                                                                                
+                                                                                                </div>
+                        </form>
+                </div>
+            </div>
+      
+</div>
+
+
+
+
+
+
+
+
+<div class="row" id="div6" style="display:none; padding-top: 25px;">
+        <div class="col-sm-12">
+            <div class="dataTables_scroll">
+
+                
+                <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%; height: 554px;">
+                    <table id="example" class="display table table-bordered dataTable no-footer" role="grid" aria-describedby="example_info">
+                        
+    <thead>
+            <tr role="row">
+                <th>S.N.</th>
+                <th>Date</th>
+                <th>Vehicle Type</th>
+                <th>Opening KM</th>
+                <th>Closing KM</th>
+                <th>Action</th>
+                    
+
+            </tr>
+            </thead>
+            <tbody id="data_come" style="height: 500px;">
+        <tr role="row">
+            <td>1</td>
+            <td>Shakun Vaidya</td>
+            <td>vaidya.shakun</td>
+            <td>vaidya.shakun</td>
+            <td>
+                 Hello 
+            </td>
+            <td>
+                <a href="#" class="btn btn-success">View More</a>
+            </td>
+
+        </tr>
+        <tr role="row">
+                <td>2</td>
+                <td>Shakun Vaidya</td>
+                <td>vaidya.shakun</td>
+                <td>vaidya.shakun</td>
+                <td>
+                     Hello 
+                </td>
+                <td>
+                    <a href="#" class="btn btn-success">View More</a>
+                </td>
+        </tr>
+        <tr role="row">
+                <td>3</td>
+                <td>Shakun Vaidya</td>
+                <td>vaidya.shakun</td>
+                <td>vaidya.shakun</td>
+                <td>
+                     Hello 
+                </td>
+                <td>
+                    <a href="#" class="btn btn-success">View More</a>
+                </td>
+
+            </tr>
+            <tr role="row">
+                    <td>4</td>
+                    <td>Shakun Vaidya</td>
+                    <td>vaidya.shakun</td>
+                    <td>vaidya.shakun</td>
+                    <td>
+                         Hello 
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-success">View More</a>
+                    </td>
+            </tr>
+            <tr role="row">
+                    <td>5</td>
+                    <td>Shakun Vaidya</td>
+                    <td>vaidya.shakun</td>
+                    <td>vaidya.shakun</td>
+                    <td>
+                         Hello 
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-success">View More</a>
+                    </td>
+
+                </tr>
+                <tr role="row">
+                        <td>6</td>
+                        <td>Shakun Vaidya</td>
+                        <td>vaidya.shakun</td>
+                        <td>vaidya.shakun</td>
+                        <td>
+                             Hello 
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-success">View More</a>
+                        </td>
+                </tr>
+                <tr role="row">
+                        <td>7</td>
+                        <td>Shakun Vaidya</td>
+                        <td>vaidya.shakun</td>
+                        <td>vaidya.shakun</td>
+                        <td>
+                             Hello 
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-success">View More</a>
+                        </td>
+
+                    </tr>
+                    <tr role="row">
+                            <td>8</td>
+                            <td>Shakun Vaidya</td>
+                            <td>vaidya.shakun</td>
+                            <td>vaidya.shakun</td>
+                            <td>
+                                 Hello 
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-success">View More</a>
+                            </td>
+                    </tr>
+                    <tr role="row">
+                            <td>9</td>
+                            <td>Shakun Vaidya</td>
+                            <td>vaidya.shakun</td>
+                            <td>vaidya.shakun</td>
+                            <td>
+                                 Hello 
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn-success">View More</a>
+                            </td>
+    
+                        </tr>
+                        <tr role="row">
+                                <td>10</td>
+                                <td>Shakun Vaidya</td>
+                                <td>vaidya.shakun</td>
+                                <td>vaidya.shakun</td>
+                                <td>
+                                     Hello 
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-success">View More</a>
+                                </td>
+                        </tr>
+                        
+        
+        
+        
+    </tbody>
+
+</table></div>
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row" id="myDIVFooter">
+            <div class="col-sm-5">
+                <div>Showing 1 to 10 of 43 entries
+                </div>
+            </div>
+            <div class="col-sm-7">
+                
+                    <ul class="pagination">
+                        <li class="disabled" id="example_previous">
+                            <a href="#" aria-controls="example" data-dt-idx="0" tabindex="0">Previous</a>
+                        </li>
+                        <li class="active">
+                            <a href="#" aria-controls="example" data-dt-idx="1" tabindex="0">1</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-controls="example" data-dt-idx="2" tabindex="0">2</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-controls="example" data-dt-idx="3" tabindex="0">3</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-controls="example" data-dt-idx="4" tabindex="0">4</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-controls="example" data-dt-idx="5" tabindex="0">5</a>
+                        </li>
+                        <li class="paginate_button next" id="example_next">
+                            <a href="#" aria-controls="example" data-dt-idx="6" tabindex="0">Next</a>
+                        </li>
+                    </ul>
+                
+            </div>
+        </div>
+        <div class="row" id="myDIVAllocate" style="display: none; margin-top: 10px; margin-bottom: 10px;">
+                <div class="col-sm-5">
+                    
+                </div>
+                <div class="col-sm-4">
+                    
+                        <button type="submit" class="btn btn-default btn-success btn-lg">Allocate</button>   
+                    
+                </div>
+                <div class="col-sm-3">
+                    
+                        
+                    
+                    </div>
+            </div>
+    </div>
+</div>
+</div>
+
+            <div class="container-fluid">
+                    <div class="admin_footer">Dalmia</div>
+            </div>
+</body>
+</html>

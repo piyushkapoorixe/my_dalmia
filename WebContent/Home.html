@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1">
+	<title>Dalmia</title>
+	<link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="/image/favicon.ico" type="image/ico" />
+	<!-- Bootstrap framework -->
+	<link type="text/css" href="css/admin-style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<script type='text/javascript' src="js/jquery.min.js"></script>
+	<script type='text/javascript' src="js/jquery.blockUI.js"></script>
+	<script type='text/javascript'>
+
+
+	</script>
+	<style>
+		.one {
+			width: 80px;
+			height: 80px;
+			margin: 0 auto;
+			margin-top: 25px;
+		}
+
+		div.circle {
+			-moz-border-radius: 50px/50px;
+			-webkit-border-radius: 50px 50px;
+			border-radius: 50%;
+			border: solid 1px #B7B9C1;
+			width: 200px;
+			height: 200px;
+			margin-top: 100px;
+			box-shadow: 0px 1px 4px #e2e2e2 !important;
+		}
+
+		.row_bottom {
+			margin-bottom: 100px !important;
+		}
+
+		.circle:hover {
+			background-color: lightblue;
+		}
+
+
+
+		.image-text {
+			padding-top: 25px;
+			font-family: inherit;
+			font-weight: 500;
+			font-size: 16px;
+
+		}
+
+		.image-text-1 {
+			padding-top: 23px;
+			font-family: inherit;
+			font-weight: 500;
+			font-size: 15px;
+		}
+
+		.admin_footer {
+			background-color: #e5e5e5;
+			color: #333333;
+			text-align: center;
+			font-size: 12px;
+			line-height: 40px;
+			bottom: 0px;
+			width: 100%;
+			position: fixed;
+			bottom: 0px;
+			margin-left: -15px;
+		}
+
+		.admin_header {
+			background-color: #eeeee7;
+		}
+
+		.admin_logo {
+			margin: 10px 0 10px 0px;
+			float: left;
+		}
+
+		.admin_version {
+			margin: 34px 30px 12px 0px;
+			float: right;
+			font-size: 12px;
+			color: #000;
+		}
+
+		.admin_left {
+			float: left;
+			width: 850px;
+			margin-top: 0px;
+		}
+
+		.admin_menu {
+			background-color: #283563;
+			padding: 0 0 0 0px;
+			margin-bottom: 20px;
+		}
+
+		.admin_menu ul {
+			list-style: none;
+		}
+
+		ul {
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+
+		.admin_menu ul li {
+			list-style: none;
+			display: inline;
+			line-height: 40px;
+			font-size: 14px;
+			position: relative;
+			color: #FFF;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="maincontainer" class="clearfix">
+		<header>
+			<div class="container">
+				<div class="admin_header">
+					<div class="admin_logo">
+						<img src="images/logo2.png" width="200" height="auto">
+					</div>
+					<div class="admin_version">
+						<div class="admin_left welcome_admin">
+							<div class="col-lg-5">
+								<h1>Welcome to</h1>
+								<span id="lblusername">
+									<img src="images/user.png" width="30" height="auto"> techsupport@netcommlabs.com</span></div>
+							<div class="col-lg-3">
+								<h2>Last Login </h2>
+								<span><img src="images/time.png" width="30" height="auto">2018.07.23.12.38.33</span></div>
+							<div class="col-lg-3">
+								<h2>Role(Admin) </h2> <span>Admin</span></div>
+							<div class="col-lg-1" style="margin-top:10px;">
+								<form action="#" method="post">
+									<input type="submit" value="Logout" class="btn btn-danger pull-right">
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="admin_menu">
+				<div class="container">
+					<ul>
+
+						<li class="dropdown" onclick="gotoHome()"><a href="Home.html">Back to DashBoard</a></li>
+					</ul>
+
+				</div>
+			</div>
+
+
+		</header>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<center><a href="daily_visit.html" style="text-decoration : none; color : #000000;"><div class="circle"><img class="one" src="images/create_admin.png"
+							 alt="CREATE ADMIN"><p class="image-text">DAILY VISIT</p>
+						</div></a></center>
+			</div>
+			<div class="col-lg-4">
+				<center><a href="sales_promotional_activity.html" style="text-decoration : none; color : #000000;"><div class="circle"><img class="one"
+							 src="images/create_admin.png" alt="CREATE ADMIN"><p class="image-text-1">SALES PROMOTIONAL ACTIVITY</p>
+						</div></a></center>
+			</div>
+			<div class="col-lg-4">
+				<center><a href="concrete_supervision.html" style="text-decoration : none; color : #000000;"><div class="circle"><img class="one"
+							 src="images/create_admin.png" alt="CREATE ADMIN"><p class="image-text">CONCRETE SUPERVISION</p>
+						</div></a></center>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<center><a href="techexpert.html" style="text-decoration : none; color : #000000;"><div class="circle"><img class="one" src="images/create_admin.png"
+							 alt="CREATE ADMIN"><p class="image-text">TECH EXPERT</p>
+						</div></a></center>
+			</div>
+			<div class="col-lg-4">
+				<center><a href="is_verification.html" style="text-decoration : none; color : #000000;"><div class="circle"><img class="one"
+							 src="images/create_admin.png" alt="CREATE ADMIN"><p class="image-text">IS VERIFICATION</p>
+						</div></a></center>
+			</div>
+			<div class="col-lg-4">
+				<center><a href="complaint_feedback.html" style="text-decoration : none; color : #000000;"><div class="circle"><img class="one"
+							 src="images/create_admin.png" alt="CREATE ADMIN"><p class="image-text">COMPLAINT & FEEDBACK</p>
+						</div></a></center>
+			</div>
+		</div>
+		<div class="row row_bottom">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-4">
+				<center><a href="gift_inventory.html" style="text-decoration : none; color : #000000;"><div class="circle"><img class="one" src="images/create_admin.png"
+							 alt="CREATE ADMIN"><p class="image-text">GIFT INVENTORY</p>
+						</div></a></center>
+			</div>
+			<div class="col-lg-4">
+				<center><a href="#" style="text-decoration : none; color : #000000;"><div class="circle"><img class="one" src="images/create_admin.png"
+							 alt="CREATE ADMIN"><p class="image-text">REPORT</p>
+						</div></a></center>
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+	</div>
+
+	<!--
+	<div class="container">
+		<table>
+			<tr>
+				<td><input type="submit"
+					onclick="window.history.go(-1); return false;" value="Back"
+					class="btn_inp_al" />
+
+					<p></p></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+			<td>
+				<h4>Add City</h4>
+			</td>
+		</tr>
+		</table>
+		<table class="table table-striped table-bordered table-condensed">
+		
+			<tr>
+				<td>District<span style="color: red;">*</span></td>
+				<td><select id="master_city_distric_select">
+				</select></td>
+			</tr>
+			<tr>
+				<td>City<span style="color: red;">*</span></td>
+				<td><input type="text" id="master_city_name_city" /></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><input id="master_city_name_city_active" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnActive"
+					checked="checked" /><label for="master_city_name_city_active">Active</label>
+					<input id="master_city_name_city_deactive" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnDeactive" /><label
+					for="master_city_name_city_deactive">Deactive</label></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Save" id="master_city_name_city_save"
+					class="btn_inp_al" /></td>
+			</tr>
+		</table>
+	</div>
+
+
+	<div class="container">
+		<table>
+			<tr>
+				<td><input type="submit"
+					onclick="window.history.go(-1); return false;" value="Back"
+					class="btn_inp_al" />
+
+					<p></p></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<h4>Add Machinary</h4>
+				</td>
+			</tr>
+		</table>
+		<table class="table table-striped table-bordered table-condensed">
+			<tr>
+				<td>Machinaries<span style="color: red;">*</span></td>
+				<td><input type="text" required id="name_machine" /></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><input id="machine_active" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" checked="checked" /><label
+					for="machine_active">Active</label> <input id="machine_deactive"
+					type="radio" name="ctl00$ContentPlaceHolder1$status" /><label
+					for="machine_deactive">Deactive</label></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Save"
+					class="btn_inp_al" id="save_machine" /></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="container">
+		<table>
+			<tr>
+				<td><input type="submit"
+					onclick="window.history.go(-1); return false;" value="Back"
+					class="btn_inp_al" />
+
+					<p></p></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+			<td>
+				<h4>Add ManPower</h4>
+			</td>
+		</tr>
+		</table>
+		<table class="table table-striped table-bordered table-condensed">
+			<tr>
+				<td>ManPower<span style="color: red;">*</span></td>
+				<td><input type="text" id="name_manpower" /></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><input id="manpower_active" type="radio" checked="checked" /><label
+					for="manpower_active">Active</label> <input id="manpower_deactive"
+					type="radio" name="ctl00$ContentPlaceHolder1$status" /><label
+					for="manpower_deactive">Deactive</label></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" id="save_manpower"
+					value="Save" class="btn_inp_al" /></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="container">
+		<table>
+			<tr>
+				<td><input type="submit"
+					onclick="window.history.go(-1); return false;" value="Back"
+					class="btn_inp_al" />
+
+					<p></p></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<h4>Add Profession</h4>
+				</td>
+			</tr>
+		</table>
+		<table class="table table-striped table-bordered table-condensed">
+			<tr>
+				<td>Profession<span style="color: red;">*</span></td>
+				<td><input type="text" id=name_profession /></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><input id="profession_active" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnActive"
+					checked="checked" /><label for="profession_active">Active</label>
+					<input id="profession_deactive" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnDeactive" /><label
+					for="profession_deactive">Deactive</label></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Save"
+					class="btn_inp_al" id="save_profession" /></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="container">
+		<table>
+			<tr>
+				<td><input type="submit"
+					onclick="window.history.go(-1); return false;" value="Back"
+					class="btn_inp_al" />
+
+					<p></p></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<h4>Add Qualification</h4>
+				</td>
+			</tr>
+		</table>
+		<table class="table table-striped table-bordered table-condensed">
+			<tr>
+				<td>Qualification<span style="color: red;">*</span></td>
+				<td><input type="text" id="name_Qualification" /></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><input id="name_Qualification_active" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnActive"
+					checked="checked" /><label for="name_Qualification_active">Active</label>
+					<input id="name_Qualification_deactive" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnDeactive" /><label
+					for="name_Qualification_deactive">Deactive</label></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Save" id="name_Qualification_save"
+					class="btn_inp_al" /></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="container">
+		<table>
+			<tr>
+				<td><input type="submit"
+					onclick="window.history.go(-1); return false;" value="Back"
+					class="btn_inp_al" />
+
+					<p></p></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<h4>Add Query/Feedback</h4>
+				</td>
+			</tr>
+		</table>
+		<table class="table table-striped table-bordered table-condensed">
+			<tr>
+				<td>Type</td>
+				<td><select id="name_select_query_feedback">
+						<option value=1>Query</option>
+						<option value=2>Feedback</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Query/Feedback<span style="color: red;">*</span></td>
+				<td>
+				<textarea id="name_query_feedback" type="text" style="width:100%; min-height:70px;"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><input id="name_query_feedback_active" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnActive"
+					checked="checked" /><label for="name_query_feedback_active">Active</label>
+					<input id="ContentPlaceHolder1_rdBtnDeactive" type="radio"
+					name="name_query_feedback_deactive" value="rdBtnDeactive" /><label
+					for="name_query_feedback_deactive">Deactive</label></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Save" id="name_query_feedback_save"
+					class="btn_inp_al" /></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="container">
+		<table>
+			<tr>
+				<td><input type="submit"
+					onclick="window.history.go(-1); return false;" value="Back"
+					class="btn_inp_al" />
+
+					<p></p></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<h4>Add Zone</h4>
+				</td>
+			</tr>
+		</table>
+		<table class="table table-striped table-bordered table-condensed">
+			<tr>
+				<td>Zone Name<span style="color: red;">*</span></td>
+				<td><input type="text" id="name_region" /></td>
+			</tr>
+			<tr>
+				<td>Contact No<span style="color: red;">*</span></td>
+				<td><input maxlength="12" id="name_region_contact" /></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><input id="name_region_active" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnActive"
+					checked="checked" /><label for="name_region_active">Active</label>
+					<input id="name_region_deactive" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnDeactive" /><label
+					for=""name_region_deactive"">Deactive</label></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Save"
+					class="btn_inp_al" id="save_name_region" /></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="container">
+		<table>
+			<tr>
+				<td><input type="submit"
+					onclick="window.history.go(-1); return false;" value="Back"
+					class="btn_inp_al" />
+
+					<p></p></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<h4>Add Specialization</h4>
+				</td>
+			</tr>
+		</table>		
+		<table class="table table-striped table-bordered table-condensed">
+			<tr>
+				<td>Specialization<span style="color: red;">*</span></td>
+				<td><input type="text" id="name_specialization" /></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><input id="name_specialization_active" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnActive"
+					checked="checked" /><label for="name_specialization_active">Active</label>
+					<input id="name_specialization_deactive" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnDeactive" /><label
+					for="name_specialization_deactive">Deactive</label></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Save" id="name_specialization_save"
+					class="btn_inp_al" /></td>
+			</tr>
+		</table>
+	</div>
+	
+
+	<div class="container">
+		<table>
+			<tr>
+				<td><input type="submit"
+					onclick="window.history.go(-1); return false;" value="Back"
+					class="btn_inp_al" />
+
+					<p></p></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<h4>Add State</h4>
+				</td>
+			</tr>
+		</table>
+		<table class="table table-striped table-bordered table-condensed">
+			<tr>
+				<td>State<span style="color: red;">*</span></td>
+				<td><input type="text" id="name_state_for_select_region" /></td>
+
+			</tr>
+			<tr>
+				<td>Zone<span style="color: red;">*</span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><input id="name_state_for_select_region_active"
+					type="radio" name="ctl00$ContentPlaceHolder1$status"
+					value="rdBtnActive" checked="checked" /><label
+					for="name_state_for_select_region_active">Active</label> <input
+					id="name_state_for_select_region_deactive" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnDeactive" /><label
+					for="name_state_for_select_region_deactive">Deactive</label></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Save"
+					class="btn_inp_al" id="name_state_for_select_region_save" /></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="container">
+		<table>
+			<tr>
+				<td><input type="submit"
+					onclick="window.history.go(-1); return false;" value="Back"
+					class="btn_inp_al" />
+
+					<p></p></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<h4>Add Region</h4>
+				</td>
+			</tr>
+		</table>
+		<table class="table table-striped table-bordered table-condensed">
+			
+			<tr>
+				<td>Region<span style="color: red;">*</span></td>
+				<td><input type="text" id="name_user_region" /></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><input id="name_user_region_active" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnActive"
+					checked="checked" /><label for="name_user_region_active">Active</label>
+					<input id="name_user_region_deactive" type="radio"
+					name="ctl00$ContentPlaceHolder1$status" value="rdBtnDeactive" /><label
+					for="name_user_region_deactive">Deactive</label></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Save" id="user_region_submit"
+					class="btn_inp_al" /></td>
+			</tr>
+		</table>
+	</div>
+-->
+	<div class="container-fluid">
+		<div class="admin_footer">Dalmia</div>
+	</div>
+
+</body>
+
+</html>
